@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/surveyEvalBg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <ImageButton
+        android:id="@+id/ok_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_button_bg"
+        android:scaleType="centerInside"
+        android:src="@drawable/ok_before_bg"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/control_show_button_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingLeft="10dip"
+                android:paddingTop="13dip"
+                android:text="车辆定型信息"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/veh_imgBrand"
+                android:layout_width="75dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="6dip"
+                android:layout_toLeftOf="@+id/jian"
+                android:background="@drawable/eval_btn_bg"
+                android:gravity="center"
+                android:text="选择品牌" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/carinfolalyout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titlebar"
+                android:background="@color/white" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="1.2"
+                    android:background="@color/color2"
+                    android:gravity="center"
+                    android:text="工时方案 "
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/textBtn_priceSource_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="55dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:hint="必选项"
+                    android:textColor="@color/blueMainText"
+                    android:textSize="16sp"
+                    android:visibility="gone" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imagevBtn_priceSource_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:src="@drawable/arrow_to_right"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/chex_btn_brand"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="品牌查询"
+                    android:textSize="20sp" >
+                </Button>
+
+                <Button
+                    android:id="@+id/chex_btn_vin"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="VIN查询"
+                    android:textSize="20sp"
+                    android:visibility="gone" >
+                </Button>
+
+                <Button
+                    android:id="@+id/chex_btn_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="拍照上传"
+                    android:textSize="20sp"
+                    android:visibility="gone" >
+                </Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TableLayout01"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/veh_editText_name"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="3"
+                    android:hint="请输入车型名称或Vin码"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="0dp"
+                    android:paddingTop="0dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/veh_imgBrand_search"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="查询"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/veh_imgVin_search"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/color2"
+                    android:gravity="center"
+                    android:text="VIN"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dxinfolayout"
+                style="@style/content_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="品牌名称"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/veh_vehBrand"
+                    style="@style/content_label"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1.5"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_weight="1"
+                    android:text="车型名称"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/veh_vehInfo"
+                    style="@style/content_label"
+                    android:layout_weight="1.5"
+                    android:text=""
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bandlistlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/control_show_button_bar"
+        android:background="@color/surveyEvalBg"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="9dip"
+            android:background="@drawable/eval_new_upline"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:id="@+id/TableLayout03"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black" >
+
+            <View
+                android:layout_height="1dip"
+                android:layout_marginTop="1dip"
+                android:background="#FF909090" />
+
+            <TableRow android:background="@color/color2" >
+
+                <TextView
+                    android:layout_weight="2"
+                    android:text="车型名称"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="变速器"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="排量"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090" />
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/veh_vehList"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.0"
+            android:scrollingCache="false" >
+        </ListView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:background="@drawable/eval_new_downline" />
+    </LinearLayout>
+
+</RelativeLayout>

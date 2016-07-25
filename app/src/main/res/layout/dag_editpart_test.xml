@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        >
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+
+         <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+             android:text="零件名称:"
+             android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/eval_part_original_name"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+         <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+             android:text="原厂零件号:"
+             android:textSize="18sp" />
+
+          <EditText
+                android:id="@+id/eval_part_original_id"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    	</LinearLayout>
+    	
+         <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+         <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+            android:text="单价"
+             android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/eval_part_loss_price"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+         <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+             android:text="数量"
+             android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/eval_part_loss_count"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    	</LinearLayout>
+    	
+          <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+<TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+            android:text="是否回收"
+             android:textSize="18sp" />
+
+            <EditText
+               android:id="@+id/eval_part_reuse_flag"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+         <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+              android:text="残值"
+             android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/eval_part_remnant"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    	</LinearLayout>
+    	
+           <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+ 		<TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+               android:text="参考价格:"
+             android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/eval_part_ref_price"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+             <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+              android:text="小计:"
+             android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/eval_part_loss_sum"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    	</LinearLayout>
+    	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+    	<TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+             android:text="厂方指导价:"
+             android:textSize="18sp" />
+
+            <TextView
+                 android:id="@+id/addpart_xtjg1"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:text=""
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+             <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+            android:text="系统市场价:"
+             android:textSize="18sp" />
+
+            <TextView
+                 android:id="@+id/addpart_xtjg2"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    	</LinearLayout>
+    	    	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+    	<TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+              android:text="本地厂方价:"
+             android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/addpart_bdjg1"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+ 				android:text=""                
+ 				android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+             <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+            android:text="本地市场价:"
+             android:textSize="18sp" />
+
+            <TextView
+               android:id="@+id/addpart_bdjg2"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    	</LinearLayout>
+    	    	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+    	<TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+              android:text="本地适用价:"
+             android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                 android:text=""
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+             <TextView
+             android:layout_width="0dip"
+             android:layout_height="wrap_content" 
+             android:layout_weight="1"
+             android:gravity="left"
+             android:text="险别:"
+             android:textSize="18sp" />
+
+            <TextView
+              android:id="@+id/eval_part_insurance_term"
+                android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    	</LinearLayout>
+    	    	 <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+            <TextView
+               android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1" 
+                android:text="零件备注:"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/addpart_ljbz"
+               android:layout_width="0dip"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="2" 
+                android:layout_span="3"
+                android:text=""
+                 >
+            </EditText>
+            </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

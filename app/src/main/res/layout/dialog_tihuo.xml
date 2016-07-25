@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:padding="10dip" >
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="提货商:" />
+
+                <TextView
+                    android:id="@+id/tihuo_company"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="联系人:" />
+
+                <TextView
+                    android:id="@+id/tihuo_contact"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="电    话:" />
+
+                <TextView
+                    android:id="@+id/tihuo_phone"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="省    份:" />
+
+                <TextView
+                    android:id="@+id/tihuo_province"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="城    市:" />
+
+                <TextView
+                    android:id="@+id/tihuo_city"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

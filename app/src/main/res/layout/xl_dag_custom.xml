@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自定义修理项目 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_tilte"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/blueMainText"
+        android:gravity="center"
+        android:text="自定义修理项目添加"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/xl_itemSel"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="false" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工种类型"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/textBtn_zdy_chex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="必选项"
+            android:textColor="@color/blueMainText"
+            android:textSize="16sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imagevBtn_priceSource_chex"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center|right"
+            android:layout_weight="1"
+            android:src="@drawable/arrow_to_right" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableRow
+            android:paddingTop="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="20dp"
+                android:text="设置默认险别："
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_zdy_insurance"
+                android:layout_width="0dip"
+                android:layout_height="50dp"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="修理名称"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/xl_dagName"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:layout_weight="1"
+                android:textColor="@color/blueMainText"
+                android:width="150dip" >
+
+                <requestFocus />
+            </EditText>
+            
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pic_edit"
+                />
+        </TableRow>
+        <!-- <TableRow> -->
+        <!-- <TextView -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="wrap_content" android:text="维修项代码" /> -->
+        <!-- <EditText android:text="" -->
+        <!-- android:id="@+id/xl_dagCode" android:width="150dip" -->
+        <!-- android:layout_height="wrap_content" > -->
+        <!-- </EditText> -->
+        <!-- </TableRow> -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="维修工时"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/xl_diaManhour"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numeric="decimal"
+                android:text="1"
+                android:layout_weight="1"
+                android:textColor="@color/blueMainText"
+                android:width="150dip" >
+            </EditText>
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pic_edit"
+                />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="工时单价"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/xl_diaRate"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numeric="decimal"
+                android:text=""
+                android:layout_weight="1"
+                android:textColor="@color/blueMainText"
+                android:width="150dip" >
+            </EditText>
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pic_edit"
+                />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dilaogColor" >
+
+            <Button
+                android:id="@+id/dialog_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="保存"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/dialog_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="取消"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </TableLayout>
+
+</LinearLayout>

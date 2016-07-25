@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 修理项目子项显示，隐藏ID -->
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- 	android:layout_width="fill_parent" -->
+<!-- 	android:layout_height="40dip" -->
+<!-- 	android:background="@color/white" -->
+<!-- 	android:orientation="horizontal"> -->
+<!-- 		<CheckBox android:id="@+id/assist_select_box"  -->
+<!-- 		    android:layout_width="wrap_content" -->
+<!-- 			android:focusable="false" -->
+<!-- 			android:paddingRight="10dp" -->
+<!-- 			android:layout_height="wrap_content" /> -->
+		
+<!-- 		<TextView android:id="@+id/assist_name" -->
+<!-- 			android:layout_width="100dip" -->
+<!-- 			android:layout_weight="1" -->
+<!-- 			android:gravity="center" -->
+<!-- 			android:layout_height="wrap_content"  -->
+<!-- 			android:textColor="@color/black" -->
+<!-- 			android:textSize="18sp"> -->
+<!-- 		</TextView> -->
+		
+<!-- 		<EditText android:id="@+id/assist_unit_price" -->
+<!-- 			android:layout_width="80dip" -->
+<!-- 			android:layout_weight="1" -->
+<!-- 			android:layout_height="wrap_content" -->
+<!-- 			android:textColor="@color/black" -->
+<!-- 			android:hint="0.0" -->
+<!-- 			android:numeric="decimal" -->
+<!-- 			android:inputType="numberDecimal" -->
+<!-- 			android:textSize="18sp" -->
+<!-- 			android:enabled="false"> -->
+<!-- 		</EditText> -->
+		
+<!-- 		<EditText android:id="@+id/assist_count" -->
+<!-- 			android:layout_width="80dip" -->
+<!-- 			android:layout_weight="1" -->
+<!-- 			android:layout_height="wrap_content" -->
+<!-- 			android:textColor="@color/black" -->
+<!-- 			android:hint="1" -->
+<!-- 			android:gravity="center" -->
+<!-- 			android:inputType="numberDecimal" -->
+<!-- 			android:digits="0123456789" -->
+<!-- 			android:textSize="18sp" -->
+<!-- 			android:enabled="false"> -->
+<!-- 		</EditText> -->
+		
+		
+<!-- </LinearLayout> -->
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/assist_select_box"
+               android:layout_width="38dp"
+        android:layout_height="30dp"
+         android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:clickable="false"   
+            android:focusable="false"
+            android:layout_marginLeft="15dip"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/assist_name"
+            style="@style/eval_item_text"
+            android:gravity="left"
+             android:layout_width="100dip"
+             android:paddingLeft="10dip"
+            android:layout_weight="3" />
+        <TextView
+            android:id="@+id/assist_refManHour"
+             android:gravity="center"
+            style="@style/eval_item_text"
+             android:layout_width="100dip"
+            android:layout_weight="1"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/assist_manHour"
+            style="@style/eval_item_text"
+             android:gravity="center"
+             android:layout_width="100dip"
+            android:layout_weight="1"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/rl_part"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:stretchColumns="1,2,3,4"
+        android:shrinkColumns="1,2,3,4" >
+		<TableRow >
+		     
+	        <TextView
+	            style="@style/eval_item_text"
+	            android:layout_width="60dip"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="40dip"
+	            android:text="数量" />
+	
+	        <TextView
+	            android:id="@+id/assist_count"
+	            style="@style/eval_item_text"
+	            android:layout_width="80dip"
+	            android:layout_height="fill_parent"
+	            android:background="@color/white"
+	            android:text="0.0"
+			/>
+	        <TextView
+	            style="@style/eval_item_text"
+	            android:layout_width="60dip"
+	            android:layout_height="wrap_content"
+	            android:text="单价" />
+	
+	         <TextView
+	            android:id="@+id/assist_unit_price"
+	            style="@style/eval_item_text"
+	            android:layout_width="80dip"
+	            android:layout_height="fill_parent"
+	            android:background="@color/white"
+	            android:text="1"
+	          />
+	         <TextView
+	             android:id="@+id/eval_part_loss_mi"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	             android:layout_marginLeft="8dp"
+	            android:layout_marginRight="8dp"
+	            android:text=""
+	            android:visibility="gone"
+	            android:background="@drawable/mi"
+	             />
+        </TableRow>
+        <TableRow 
+            android:visibility="gone"
+            >
+            <TextView
+	            android:id="@+id/tv_n"
+	            style="@style/eval_item_text"
+	            android:layout_width="60dip"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="40dip"
+	            android:text="残值：" />
+	
+	        <EditText
+	            android:id="@+id/eval_part_remant"
+	            style="@style/eval_item_text"
+	            android:layout_width="80dip"
+	            android:layout_height="wrap_content"
+	            android:hint="0.0"
+				android:numeric="decimal"
+				android:inputType="numberDecimal"
+	             />
+            <TextView
+	            style="@style/eval_item_text"
+	            android:layout_width="60dip"
+	            android:layout_height="wrap_content"
+	            android:text="小计：" />
+	         <TextView
+	            android:id="@+id/eval_part_loss_sum"
+	            style="@style/eval_item_text"
+	            android:textColor="@color/red"
+	            android:layout_width="100dip"
+	            android:layout_height="wrap_content"
+	            android:text="0"
+	          />
+	         
+	<EditText android:id="@+id/assist_sum"
+			android:layout_width="80dip"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:hint="0.0"
+			android:inputType="numberDecimal"
+			android:textSize="18sp"
+			android:enabled="false">
+		</EditText>
+		
+		<TextView android:id="@+id/assist_id"
+			android:layout_width="0px"
+			android:layout_height="0px" 
+			android:textColor="@color/black">
+		</TextView>
+		
+		<TextView android:id="@+id/assist_index"
+			android:layout_width="0px"
+			android:layout_height="0px" 
+			android:textColor="@color/black">
+		</TextView>
+<!-- 	        <TextView -->
+<!-- 	            style="@style/eval_item_text" -->
+<!-- 	            android:layout_width="60dip" -->
+<!-- 	            android:layout_height="wrap_content" -->
+<!-- 	            android:text="险别：" /> -->
+	
+<!-- 	        <TextView -->
+<!-- 	            android:id="@+id/tv_insureTermCode" -->
+<!-- 	            style="@style/eval_item_text" -->
+<!-- 	            android:layout_height="wrap_content" -->
+<!-- 	            android:layout_width="wrap_content" -->
+<!-- 	            android:layout_span="3" -->
+<!-- 	            /> -->
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

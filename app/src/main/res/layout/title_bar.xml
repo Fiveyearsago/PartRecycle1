@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlelayout"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_alignParentTop="true"
+    android:background="#20C6C6"
+    android:orientation="horizontal" >
+
+    <!-- android:background="@drawable/menu_title_bg" -->
+
+    <Button
+        android:id="@+id/menu_title_back"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_gravity="left"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/menu_tilte_back_buttonbg" />
+
+    <TextView
+        android:id="@+id/menu_title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dip"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/eval_btn_outLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@drawable/btn_text_selector"
+        android:textSize="15sp" />
+
+</FrameLayout>

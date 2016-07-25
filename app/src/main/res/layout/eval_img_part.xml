@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res/com.jy.recycle"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#d7e2e4"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/picture_selection_fragement"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/ll_bigImg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.jy.recycle.ui.eval.picture.Panel
+                android:id="@+id/topPanel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                panel:animationDuration="750"
+                panel:closedHandle="@drawable/top_switcher_collapsed_focused"
+                panel:content="@+id/panelContent"
+                panel:handle="@+id/panelHandle"
+                panel:linearFlying="true"
+                panel:openedHandle="@drawable/top_switcher_expanded_background"
+                panel:position="top" >
+
+                <!-- android:paddingBottom="4dip" -->
+
+                <Button
+                    android:id="@+id/panelHandle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="33dip" />
+
+                <RelativeLayout
+                    android:id="@+id/panelContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/contral_show_title_bg" >
+
+                    <TableRow
+                        android:id="@+id/tr_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:text="价格方案 "
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/part_spnJgfa"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="1"
+                            android:drawSelectorOnTop="false"
+                            android:prompt="@string/proJgfa" />
+                    </TableRow>
+
+                    <HorizontalScrollView
+                        android:id="@+id/hsv_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tr_1"
+                        android:scrollbars="none"
+                        android:visibility="visible" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="150dip"
+                            android:orientation="horizontal" >
+
+                            <com.jy.recycle.ui.eval.picture.MyButton
+                                android:id="@+id/btn_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/eval_btn_bg" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </RelativeLayout>
+            </com.jy.recycle.ui.eval.picture.Panel>
+
+            <!--
+            <com.jy.recycle.ui.eval.picture.HotPointImageView
+                android:id="@+id/image_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="matrix" >
+            </com.jy.recycle.ui.eval.picture.HotPointImageView>
+            -->
+
+            <com.jy.recycle.ui.eval.picture.MyGallery
+                android:id="@+id/gallery"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:spacing="20px" >
+            </com.jy.recycle.ui.eval.picture.MyGallery>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tab_bg" >
+
+            <ImageButton
+                android:id="@+id/show_index_picture"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@drawable/accept_before"
+                android:visibility="gone" />
+
+            <Gallery
+                android:id="@+id/gry_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:spacing="5dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

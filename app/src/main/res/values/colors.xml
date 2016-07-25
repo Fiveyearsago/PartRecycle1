@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="timetimepicker_default_text_color">#999999</color>
+	<color name="timepicker_toolbar_bg">#e60012</color>
+	<color name="timepicker_dialog_bg">#8020C6C6</color>
+	<color name="timepicker_line">#e8e8e8</color>
+	<color name="colorPrimary">#20C6C6</color>
+	<color name="colorPrimaryDark">#3c8383</color>
+	<color name="colorAccent">#20C6C6</color>
+    <color name="gray">#dddddd</color>
+    <color name="image_selected_color">#7f000000</color>
+    <color name="transparent">#00000000</color>
+	<color name="red">#FF0000</color>
+	<color name="black">#000000</color>
+	<color name="blue">#0000FF</color>
+	<color name="blue2">#D7E2E4</color>
+	<color name="white">#FFFFFFFF</color>
+	<color name="white1">#00FFFFFF</color>
+	<color name="white2">#FFFFFFFF</color>
+	<color name="color1">#224b8f</color>
+	<color name="dilaogColor">#BFBFBF</color>
+	<color name="color2">#72777b</color>
+	<color name="itemColor">#404040</color>
+	<color name="itemTitleColor01">#808080</color>
+	<color name="itemTitleColor02">#909090</color>
+	<color name="titleColor">#121a2a</color>
+	<color name="dialog_bg_gray">#D8D8D8</color>
+	<color name="blueMainText">#20C6C6</color>
+	<color name="button_color">#D8D8D8</color>
+<color name="lightblack">#ff202020</color>
+	<color name="general__shared__ffbcbcbc">#ffbcbcbc</color>
+	<!-- 查勘定损页面背景颜色 -->
+	<color name="surveyEvalBg">#d7e2e4</color>
+	
+	<!-- 布局颜色 -->
+	<color name="tab_bg">#4784a8</color>
+	<color name="title_bg">#87b4e8</color>
+	<color name="content_bg">#e8f0f8</color>
+	
+	<color name="text_color">#4784a8</color>
+	<color name="button_bg">#ff202020</color>
+	<color name="item_selected">#88808080</color>
+	
+	
+	<drawable name="darkgray">#808080</drawable>
+	<drawable name="white">#FFFFFF</drawable>
+	<drawable name="blue">#0000FF</drawable>
+	<drawable name="red">#FF0000</drawable>
+	<drawable name="CornflowerBlue">#6495ED</drawable>
+	<drawable name="SandyBrown">#F4A460</drawable>
+	
+	<item type="drawable" name="linecolor">#ffced3ce</item>
+	
+		
+	 <color name="result_view">#b0000000</color>
+      <color name="viewfinder_mask">#60000000</color>
+      <color name="possible_result_points">#c0ffff00</color> 
+	<color name ="title">#FFFFFF</color>
+</resources>

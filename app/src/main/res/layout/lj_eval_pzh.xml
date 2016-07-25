@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="1.2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dialog_tilte"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="left|center_vertical"
+                android:text="按碰撞部位及程度查找"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dip"
+                android:text="碰撞部位"
+                android:textColor="@color/black"
+                android:textSize="16sp"></TextView>
+
+            <com.jy.recycle.ui.view.CustomepzbwMustSpinner
+                android:id="@+id/lj_pzbw"
+                style="@style/spinner_text_size"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:drawSelectorOnTop="false"
+                android:prompt="@string/proJgfa"></com.jy.recycle.ui.view.CustomepzbwMustSpinner>
+
+            <TextView
+                android:id="@+id/pc_option"
+                android:layout_width="0dp"
+                android:layout_height="55dip"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="2"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="必选项"
+                android:textColor="@color/blueMainText"
+                android:visibility="gone"></TextView>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/jian_list"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dip"
+                android:text="碰撞程度"
+                android:textColor="@color/black"
+                android:textSize="16sp"></TextView>
+
+            <com.jy.recycle.ui.view.CustomepzcdMustSpinner
+                android:id="@+id/lj_pzcd"
+                style="@style/spinner_text_size"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"></com.jy.recycle.ui.view.CustomepzcdMustSpinner>
+
+            <TextView
+                android:id="@+id/pc_level"
+                android:layout_width="0dp"
+                android:layout_height="55dip"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="2"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="必选项"
+                android:textColor="@color/blueMainText"
+                android:visibility="gone"></TextView>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/jian_list"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/dialog_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="查找"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/dialog_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

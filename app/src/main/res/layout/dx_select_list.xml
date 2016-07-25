@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 由品牌选择车系，车系选择车组时显示名称，隐藏ID -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:gravity="left|center_vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/dx_selName"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:paddingLeft="5dip"
+        android:textColor="@color/black"
+        android:textSize="16sp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/dx_selId"
+        android:layout_width="0dip"
+        android:textSize="16sp"
+        android:layout_height="40dip" >
+    </TextView>
+
+</LinearLayout>

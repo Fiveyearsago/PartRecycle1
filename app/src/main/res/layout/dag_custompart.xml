@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="1.2dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueMainText"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/blueMainText"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/dialog_tilte"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/blueMainText"
+                android:gravity="center"
+                android:text="自定义换件"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="配件名称" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <EditText
+                android:id="@+id/lj_dia_customName"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="原厂编码" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <EditText
+                android:id="@+id/lj_dia_original"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="定损单价" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                android:id="@+id/eval_part_loss_price"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal"
+            android:visibility="gone"
+             />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="定损数量" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                android:id="@+id/eval_part_loss_count"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" android:visibility="gone"/>
+
+        <TableRow android:paddingTop="10dp" android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="零件残值 "
+                android:textColor="@color/black"
+                android:textSize="20dip" />
+
+            <EditText
+                android:id="@+id/lj_dia_rem"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numeric="decimal"
+                android:text=""
+                android:textColor="@color/blueMainText"
+                android:width="100dip" >
+            </EditText>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@drawable/pic_edit" />
+        </TableRow>
+
+        <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="定损金额" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        android:id="@+id/eval_part_loss_sum"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:hint="" >
+                    </TextView>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" 
+                    android:visibility="gone"
+                    />
+
+        <TableRow android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="零件回收"
+                android:textColor="@color/black"
+                android:textSize="20dip" />
+
+            <CheckBox
+                android:id="@+id/lj_dia_use"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:text="是否回收"
+                android:textColor="@color/blueMainText" >
+            </CheckBox>
+        </TableRow>
+
+       <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="备注信息" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        android:id="@+id/lj_dia_mark"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:textColor="@color/blueMainText"
+                        android:hint="不必录" >
+                    </TextView>
+                </LinearLayout>
+  <View style="@style/dialog_info_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white" >
+
+            <Button
+                android:id="@+id/dialog_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="保存"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/dialog_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="放弃"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </TableLayout>
+
+</LinearLayout>

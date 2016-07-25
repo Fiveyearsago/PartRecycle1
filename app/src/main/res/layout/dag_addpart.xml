@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="1.2dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+   <RelativeLayout 
+                android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+                android:background="@color/black"
+                >
+            <TextView
+                android:id="@+id/dialog_tilte"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="left|center_vertical"
+                android:text="          "
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+             <ImageView
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:padding="20dip"
+                android:id="@+id/close_img"
+                android:visibility="gone"
+                android:background="@drawable/close_dialog" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#EE7700"
+        android:paddingLeft="35dip"
+        android:paddingRight="35dip"
+        android:visibility="gone" />
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="fill_parent"
+         android:background="@color/white"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:gravity="left"
+                android:text="原厂编码:"
+                android:paddingRight="5dp"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/addpart_ycljh"
+                android:text=""
+                android:gravity="left"
+                android:textColor="@color/blueMainText" />
+
+            <TextView
+                android:id="@+id/eval_part_loss_mi"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/mi"
+                android:text=""
+                android:visibility="gone" />
+        </TableRow>
+    </TableLayout>
+
+    <View style="@style/dialog_info_horizontal" />
+    <TableLayout
+        android:id="@+id/TableLayout02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1,2"
+        android:stretchColumns="0,1,2,3" >
+
+        <TableRow
+           android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:gravity="left"
+                android:text="系统厂方价"
+                android:layout_weight="1"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/addpart_xtjg"
+                android:gravity="left"
+                android:text=""
+                android:layout_weight="1"
+                android:textColor="@color/blueMainText" />
+
+            <TextView
+                android:gravity="left"
+                android:text="本地厂方价"
+                android:layout_weight="1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/addpart_bdjg"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/blueMainText" />
+        </TableRow>
+
+         <View style="@style/dialog_info_horizontal" />
+
+        <TableRow
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:gravity="left"
+                android:text="系统市场价"
+                android:layout_weight="1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/addpart_xtjg1"
+                android:gravity="left"
+                android:text=""
+                android:layout_weight="1"
+                android:textColor="@color/blueMainText" />
+
+            <TextView
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="本地市场价"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/addpart_xtjg2"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/blueMainText" />
+        </TableRow>
+
+         <View style="@style/dialog_info_horizontal" />
+
+        <TableRow
+           android:background="@color/white"
+           
+            android:padding="10dp" >
+
+            <TextView
+                android:gravity="left"
+                android:text="系统综合价"
+                 android:layout_weight="1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/addpart_bdjg1"
+                android:gravity="left"
+                android:text=""
+                 android:layout_weight="1"
+                android:textColor="@color/blueMainText" />
+
+            <TextView
+                android:gravity="left"
+                android:text="本地综合价"
+                 android:layout_weight="1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/addpart_bdjg2"
+                android:gravity="left"
+                 android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/blueMainText" />
+        </TableRow>
+
+
+        <TableRow
+           android:background="@color/dialog_bg_gray"
+           android:visibility="gone"
+            android:padding="5dp" >
+
+            <TextView
+                android:gravity="left"
+                android:text="本地适用价"
+                android:layout_weight="1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/addpart_bdjg3"
+                android:gravity="left"
+                android:text=""
+                android:layout_weight="1"
+                android:textColor="@color/blueMainText" />
+        </TableRow>
+    </TableLayout>
+
+    <View style="@style/dialog_info_horizontal" />
+
+    <TableLayout
+        android:id="@+id/TableLayout03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:gravity="left"
+                android:text="零件备注"
+                android:layout_weight="1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/addpart_ljbz"
+                android:text=""
+                 android:layout_weight="1"
+                android:textColor="@color/blueMainText" />
+        </TableRow>
+    </TableLayout>
+     <View style="@style/dialog_info_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+            android:background="@color/dilaogColor"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="关闭"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

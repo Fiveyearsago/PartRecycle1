@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/list_abl1"
+        style="@style/eval_item_text"
+        android:layout_width="150dip"
+        android:layout_weight="2" />
+
+    <TextView
+        android:id="@+id/list_abl2"
+        style="@style/eval_item_text"
+        android:layout_width="80dip"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/list_abl3"
+        style="@style/eval_item_text"
+        android:layout_width="50dip"
+        android:layout_weight="1" />
+     <ImageView
+                            android:id="@+id/imagevBtn_priceSource_chex"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:src="@drawable/arrow_to_right" />
+
+    <TextView
+        android:id="@+id/list_abl4"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/list_dabl1"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+
+    <TextView
+        android:id="@+id/list_dabl2"
+        android:layout_width="0dip"
+        android:layout_height="0dip"/>
+
+    <TextView
+        android:id="@+id/list_dabl3"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/list_dabl4"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/list_dabl5"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:textColor="@color/black" />
+
+</LinearLayout>

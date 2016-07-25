@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 上传数据显示窗口 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="1dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="上传数据"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding="5dip">
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="压缩进度  "
+                android:textColor="@color/black"></TextView>
+
+            <ProgressBar
+                android:layout_marginTop="5dp"
+                android:id="@+id/text_uploadbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:id="@+id/text_upload_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"></TextView>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/img_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传进度  "
+                android:textColor="@color/black"
+                android:visibility="gone"></TextView>
+
+            <ProgressBar
+                android:id="@+id/img_uploadbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:id="@+id/img_upload_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"></TextView>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+       >
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="开始上传" />
+
+        <!-- <Button android:id="@+id/hide" android:text="后台上传" android:visibility="gone" -->
+        <!-- android:layout_width="wrap_content"  android:layout_height="wrap_content" -->
+        <!-- android:layout_weight="1" /> -->
+
+        <Button
+            android:id="@+id/btn_upload_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

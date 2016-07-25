@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 弹出品牌图标进行选择 -->
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlay01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <GridView
+        android:id="@+id/brand_view0"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="50dip"
+        android:numColumns="5"
+        android:horizontalSpacing="5dip"
+        android:verticalSpacing="5dip" 
+        android:background="@color/color2"
+        />
+
+    
+
+</LinearLayout>

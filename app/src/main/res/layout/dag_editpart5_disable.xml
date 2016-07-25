@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/dialog_tilte"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/blueMainText"
+                android:gravity="center"
+                android:text="修改零件信息"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="配件名称" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/eval_part_original_name"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:hint="自动带入"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="原厂编码"
+                        android:textColor="@color/black" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/eval_part_original_id"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:hint="自动带入"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="系统价格" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/addpart_xtjg"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:editable="false"
+                        android:hint="自动带入"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    style="@style/dialog_info_horizontal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="本地价格" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/addpart_bdjg"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:editable="false"
+                        android:hint="自动带入"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    style="@style/dialog_info_horizontal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="定损单价" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        android:id="@+id/eval_part_loss_price"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:hint="必录"
+                        android:textColor="@color/blueMainText" >
+                    </TextView>
+                </LinearLayout>
+
+                <View
+                    style="@style/dialog_info_horizontal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="定损数量" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        android:id="@+id/eval_part_loss_count"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:hint="必录"
+                        android:textColor="@color/blueMainText" >
+                    </TextView>
+                </LinearLayout>
+
+                <View
+                    style="@style/dialog_info_horizontal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="定损金额" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/eval_part_loss_sum"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:editable="false"
+                        android:hint="自动带入"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    style="@style/dialog_info_horizontal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="备注信息" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        android:id="@+id/addpart_ljbz"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:ellipsize="end"
+                        android:enabled="false"
+                        android:hint="不必录"
+                        android:singleLine="true"
+                        android:textColor="@color/blueMainText" >
+                    </TextView>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="关注" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <com.jy.recycle.ui.view.SlipButton
+                        android:id="@+id/check_invoiceFlag"
+                        style="@style/eval_survey_other"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:layout_marginTop="8dp"
+                        android:enabled="false"
+                        android:hint="" >
+                    </com.jy.recycle.ui.view.SlipButton>
+                </LinearLayout>
+
+                <View
+                    style="@style/dialog_info_horizontal"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="二维码"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/result"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:digits="qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890"
+                        android:enabled="false"
+                        android:hint="扫描或输入二维码"
+                        android:inputType="textUri"
+                        android:textColor="@color/blueMainText" >
+                    </EditText>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/button_photo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="拍照"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:textColor="@color/blueMainText" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.jy.recycle.ui.view.MyGridView
+                        android:id="@+id/gridView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:horizontalSpacing="10dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="10dp" >
+                    </com.jy.recycle.ui.view.MyGridView>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="险别:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/eval_part_insurance_term"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:width="200dip" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dialog_bg_gray"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="是否回收"
+                        android:textSize="18sp" />
+
+                    <CheckBox
+                        android:id="@+id/eval_part_reuse_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </CheckBox>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="残值"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/eval_part_remnant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:numeric="decimal"
+                        android:text=""
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/layout_hejia"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:shrinkColumns="1,2,3,4"
+                android:stretchColumns="1,2,3,4"
+                android:visibility="gone" >
+
+                <TableRow>
+
+                    <TextView
+                        android:gravity="left"
+                        android:text="定损意见:"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/eval_part_forhejia_remark"
+                        android:layout_span="3"
+                        android:gravity="left"
+                        android:text=""
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black" />
+
+                <TableRow>
+
+                    <TextView
+                        android:gravity="left"
+                        android:text="核价状态:"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/eval_part_hejia_status"
+                        android:gravity="left"
+                        android:text="核价通过"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:gravity="left"
+                        android:text="核价金额:"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/eval_part_hejia_price"
+                        android:gravity="left"
+                        android:text="50.0"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </TableRow>
+                <!-- <TableRow> -->
+
+
+                <!-- <TextView -->
+                <!-- android:gravity="left" -->
+                <!-- android:text="核价小计:" -->
+                <!-- android:textSize="18sp" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/eval_part_hejia_sum" -->
+                <!-- android:gravity="left" -->
+                <!-- android:text="50.0" -->
+                <!-- android:textColor="@color/white" -->
+                <!-- android:textSize="18sp" /> -->
+                <!-- </TableRow> -->
+
+                <TableRow>
+
+                    <TextView
+                        android:gravity="left"
+                        android:text="核价意见:"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/eval_part_hejia_remark"
+                        android:layout_span="3"
+                        android:enabled="false"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <Button
+                    android:id="@+id/dialog_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="保存"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/dialog_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="删除"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/dialog_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="放弃"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

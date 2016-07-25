@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 修理项目主页面 -->
+<com.jy.recycle.ui.view.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboardLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#d7e2e4"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_bar" />
+
+    <TextView
+        android:id="@+id/pageNo"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/controllayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar"
+        android:background="@drawable/contral_show_title_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/repaircontrollayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/contral_show_title_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titlebar"
+                android:background="@color/white" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_weight="1.2"
+                    android:background="@color/color2"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="工时方案 "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+               <com.jy.recycle.ui.view.CustomeRepairPriceMustSpinner
+                    android:id="@+id/textBtn_repairItem_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="55dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                     android:visibility="gone"
+                    android:gravity="center"
+                    android:prompt="@string/proJgfa"
+                    android:hint="必选项"
+                    style="@style/spinner_text_size"
+                    android:textSize="16sp" />
+ <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:visibility="gone" 
+                android:background="@color/button_color" />
+                <ImageView
+                    android:id="@+id/imagevBtn_priceSource_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:src="@drawable/arrow_to_right"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                     android:visibility="gone" 
+                    android:background="@color/white" />
+ <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:visibility="gone" 
+                android:background="@color/button_color" />
+                <Button
+                    android:id="@+id/xl_btn_zdy"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="自定义"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" >
+                </Button>
+            </LinearLayout>
+            
+ <View
+                        android:layout_height="0.0001dp"
+                        android:layout_width="0dip"
+                        android:background="@color/dialog_bg_gray" />
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_j" -->
+            <!-- android:layout_width="fill_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_below="@id/ll_a" > -->
+
+
+            <!-- <TextView -->
+            <!-- android:layout_width="0dip" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:layout_gravity="center_vertical" -->
+            <!-- android:text="选择价格方案 :" -->
+            <!-- android:textColor="@color/black" -->
+            <!-- android:textSize="18sp" /> -->
+
+
+            <!-- <Spinner -->
+            <!-- android:id="@+id/sp_default_spnJgfa" -->
+            <!-- android:layout_width="0dip" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:layout_height="50dip" -->
+            <!-- android:drawSelectorOnTop="false" -->
+            <!-- android:prompt="@string/proJgfa" /> -->
+            <!-- </LinearLayout> -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.01dp"
+                android:background="@color/white" />
+<View
+                        android:layout_height="0.0001dp"
+                        android:layout_width="0dip"
+                        android:background="@color/button_color" />
+            <LinearLayout
+                android:id="@+id/tr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <!-- <Spinner -->
+                <!-- android:id="@+id/xl_spnLx" -->
+                <!-- android:layout_width="0dip" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:gravity="center" -->
+                <!-- android:background="@null" -->
+                <!-- android:prompt="@string/proRepair" /> -->
+
+                <com.jy.recycle.ui.view.CustomeRepairGongShitSpinner
+                    android:id="@+id/textBtn_repairLx_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="55dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:prompt="@string/proJgfa"
+                    android:hint="必选项"
+                    android:textColor="@color/blueMainText"
+                    android:textSize="16sp" />
+                
+ <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/button_color" />
+                <ImageView
+                    android:id="@+id/imagevBtn_repairItem_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:src="@drawable/arrow_to_right" 
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" />
+                
+                <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/button_color" />
+                <!-- <Spinner -->
+                <!-- android:id="@+id/xl_spnFz" -->
+                <!-- android:layout_width="0dip" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:background="@null" -->
+                <!-- android:gravity="center" /> -->
+ 
+                 <com.jy.recycle.ui.view.CustomeRepairBuWeiSpinner
+                    android:id="@+id/textBtn_repairFz_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="55dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="必选项"
+                    android:prompt="@string/proJgfa"
+                    android:textColor="@color/blueMainText"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imagevBtn_repairFz_chex"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:visibility="gone"
+                    android:src="@drawable/arrow_to_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/TableLayout06"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_color"
+            android:textColor="@color/black" >
+
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090" />
+
+            <TableRow  android:background="@color/color2" >
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="险别"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+                <TextView
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="选择"
+                    android:textColor="@color/white"
+                    style="@style/spinner_text_size" />
+ 
+                <TextView
+                    android:layout_width="450dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    
+                    android:gravity="center"
+                    android:text="名称"
+                    android:textColor="@color/white"
+                    style="@style/spinner_text_size" />
+
+               
+
+                <TextView
+                     android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="工时"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    style="@style/spinner_text_size" />
+
+             
+
+                <TextView
+                   android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="单价"
+                    android:textColor="@color/white"
+                    style="@style/spinner_text_size" />
+
+               
+                <TextView
+                     android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="金额"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    style="@style/spinner_text_size"/>
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@color/itemTitleColor02" />
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_above="@+id/ds_linBtn"
+        android:layout_below="@+id/controllayout" >
+
+        <ListView
+            android:id="@+id/xl_repairList"
+            android:divider="#B6B6B6"
+          android:dividerHeight="1dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:scrollingCache="false" >
+        </ListView>
+    </LinearLayout>
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/ds_linBtn" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" > -->
+
+
+    <!-- <ImageButton -->
+    <!-- android:id="@+id/xl_btn_add" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:background="@drawable/selector_button_bg" -->
+    <!-- android:scaleType="centerInside" -->
+    <!-- android:src="@drawable/select_before" /> -->
+
+
+    <!-- <ImageButton -->
+    <!-- android:id="@+id/xl_btn_zdy" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:background="@drawable/selector_button_bg" -->
+    <!-- android:scaleType="centerInside" -->
+    <!-- android:src="@drawable/zdy_before" /> -->
+    <!-- </LinearLayout> -->
+
+</com.jy.recycle.ui.view.ResizeLayout>

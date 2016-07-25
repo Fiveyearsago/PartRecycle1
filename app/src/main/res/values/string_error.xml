@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="no_case_alert">没有正确传入报案等信息，请确认报案等必要信息！</string>
+    <string name="no_server">很抱歉！连接不上远程服务，请检查手机是否联网，若联网，请联系管理员启动远程服务！</string>
+    <string name="usernameIsNeeded">必须输入登陆名</string>
+    <string name="passwordIsNeeded">必须输入密码</string>
+    <string name="confirmFailed">很抱歉，您输入的信息不正确，无法通过验证，请确认！</string>
+    <string name="getTaskFail">接收查勘任务失败！</string>
+
+</resources>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 弹出品牌图标进行选择 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlay01"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="1.2dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dialog_tilte"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="left|center_vertical"
+            android:text="  录入车型"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/brand_custom"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="类型名称" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="48dip"
+                android:layout_weight="2"
+                android:background="@color/white" >
+
+                <com.jy.recycle.ui.view.CustomerVehSpinner
+                    android:id="@+id/bp_chex"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/proVehi" >
+                </com.jy.recycle.ui.view.CustomerVehSpinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="@color/dialog_bg_gray"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="厂商" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                android:id="@+id/bp_changs"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:hint="不必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="品牌名称" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <EditText
+                android:id="@+id/bp_pingp"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="车系名称" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <EditText
+                android:id="@+id/bp_VehSeri"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="车组名称" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <EditText
+                android:id="@+id/bp_VehGroup"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="车型名称" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <EditText
+                android:id="@+id/bp_VehCertain"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View
+            style="@style/dialog_info_horizontal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="车款" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:hint="不必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" />
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/pb_btnOK"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/confirm"
+                android:visibility="gone" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dilaogColor" >
+
+            <Button
+                android:id="@+id/dialog_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="确定"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/dialog_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="取消"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </TableLayout>
+
+</LinearLayout>

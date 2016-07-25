@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 选择零件分组可展开式的 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlay01"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="1dp"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/partgroup_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+        
+           <com.jy.recycle.ui.view.CustomePJZMustSpinner
+                android:id="@+id/lj_fljSel"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+            </com.jy.recycle.ui.view.CustomePJZMustSpinner>
+            
+
+        <TextView
+            android:id="@+id/text_dx_partgroup"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:background="@color/color2"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/imagevBtn_partgroup_chex"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+           android:visibility="gone"
+            android:background="@color/color2"
+            android:src="@drawable/arrow_to_right_white" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/lj_groupList"
+        android:background="@color/white"
+        android:divider="#B6B6B6"
+         android:dividerHeight="1dip"
+        android:groupIndicator="@drawable/icon_selector_list"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp" >
+    </ExpandableListView>
+
+</LinearLayout>

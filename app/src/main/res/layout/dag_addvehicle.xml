@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   android:background="@color/white"
+   
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/dialog_tilte"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="left|center_vertical"
+                android:text="    选择车型"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#EE7700"
+            android:paddingLeft="35dip"
+            android:paddingRight="35dip"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:id="@+id/TableLayout01"
+            android:layout_width="fill_parent"
+            android:background="@color/white"
+            android:layout_height="fill_parent"
+            android:padding="10dip" >
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="品    牌:" />
+
+                <TextView
+                    android:id="@+id/addveh_pp"
+                    style="@style/content_value_red_highlight" />
+
+                <TextView
+                    android:id="@+id/addveh_cxid"
+                    style="@style/content_value_red_highlight"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="车    系:" />
+
+                <TextView
+                    android:id="@+id/addveh_sermc"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="车    组:" />
+
+                <TextView
+                    android:id="@+id/addveh_czmc"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+            
+            <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="车    型:" />
+
+                <TextView
+                    android:id="@+id/addveh_cxmc"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+ <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="排    量:" />
+
+                <TextView
+                    android:id="@+id/addveh_pl"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+             
+
+         <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="发动机:" />
+
+                <TextView
+                    android:id="@+id/addveh_fdj"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+              
+             <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="变速箱:" />
+
+                <TextView
+                    android:id="@+id/addveh_bsq"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+             
+
+             <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="备    注:" />
+
+                <TextView
+                    android:id="@+id/addveh_bz"
+                    style="@style/content_value_red_highlight" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+
+             <LinearLayout
+                style="@style/content_row"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="1dip"
+                    android:text="提     醒:" />
+
+                <TextView
+                    android:id="@+id/tsinfo"
+                    android:text="点击【确定】会删除全部配件信息"
+                    android:textSize="14sp"
+                    android:textColor="#ff0000"
+                    style="@style/content_value_red_highlight" />
+                
+            </LinearLayout>
+ 
+             
+            <TableRow 
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:paddingTop="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/content_label"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="提     醒:" />
+
+                <TextView
+                    android:id="@+id/tsinfoo"
+                    android:collapseColumns="1"
+                    android:textSize="14sp"
+                    android:gravity="left"
+                    android:text="点击【确定】会删除全部配件信息"
+                    android:textColor="#ff0000" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+             >
+
+            <Button
+                android:id="@+id/dialog_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="确定"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/dialog_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="取消"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

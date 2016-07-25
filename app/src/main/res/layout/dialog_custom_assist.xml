@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/black"
+    android:padding="1.2dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_tilte"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:gravity="left|center"
+        android:text="  辅料项目"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+        
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="辅料名称" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="必录" />
+        </LinearLayout>
+
+        <View style="@style/dialog_info_horizontal" />
+        
+
+      
+ <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="定损单价" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                android:id="@+id/et_price"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="0.0" />
+        </LinearLayout>
+        
+ <View style="@style/dialog_info_horizontal" />
+        
+
+ <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="定损数量" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                android:id="@+id/et_count"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="1" />
+        </LinearLayout>
+        
+ <View style="@style/dialog_info_horizontal" />
+
+       
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="险别：" />
+
+            <Spinner
+                android:id="@+id/sp_insurance"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+        </TableRow>
+
+ <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="定损金额" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                android:id="@+id/tv_sum"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                />
+        </LinearLayout>
+        
+ <View style="@style/dialog_info_horizontal" />
+       
+ 
+ <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_gray"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/dialog_info_left"
+                android:layout_weight="1"
+                android:text="备注信息" />
+
+            <View
+                style="@style/dialog_info_vertical"
+                android:layout_weight="0.015" />
+
+            <TextView
+                android:id="@+id/et_remark"
+                style="@style/dialog_info_left"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:textColor="@color/blueMainText"
+                android:hint="不必录" />
+        </LinearLayout>
+        
+ <View style="@style/dialog_info_horizontal" />
+      
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dilaogColor" >
+
+        <Button
+            android:id="@+id/dialog_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="保存"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/dialog_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="放弃"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定损单主信息弹出输入 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#d7e2e4"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ds_linBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageButton
+            android:id="@+id/eval_btn_saves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/ok_before_bg" />
+        
+         <ImageButton
+            android:id="@+id/eval_btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/selector_button_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/delete_before" />
+
+        <ImageButton
+            android:id="@+id/eval_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/cancal_before_bg" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ds_linBtn"
+        android:layout_below="@id/titlebar" >
+
+        <TableLayout
+            android:id="@+id/TableLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corner_shape" >
+            <TableRow>
+
+                <TextView
+                    style="@style/eval_survey_text"
+                    android:text="险别" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/insure_term"
+                    style="@style/eval_survey_other"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/select_notice" >
+                </Spinner>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/eval_survey_text"
+                    android:text="费用名称" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/eval_other_fee_name"
+                    style="@style/eval_survey_other"
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/select_notice" >
+                </Spinner>
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    style="@style/eval_survey_text"
+                    android:text="定损金额" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/eval_other_fee"
+                    style="@style/eval_survey_other"
+                    android:numeric="decimal|signed"
+                    android:singleLine="true" >
+                </EditText>
+            </TableRow>
+
+            
+
+            <TableRow>
+
+                <TextView
+                    style="@style/eval_survey_text"
+                    android:text="备注" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/eval_fee_remark"
+                    style="@style/eval_survey_other"
+                    android:singleLine="true" 
+                    android:layout_height="100dip">
+                </EditText>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

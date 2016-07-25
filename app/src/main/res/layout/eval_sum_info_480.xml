@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/eval_sum_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:shrinkColumns="1,2,3,4"
+    android:stretchColumns="1,2,3,4"
+    android:textColor="@color/black" >
+
+    <View
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="换件合计：" />
+
+        <TextView
+            android:id="@+id/sum_eval_part"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+
+        <TextView
+            style="@style/content_label"
+            android:text="修理合计：" />
+
+        <TextView
+            android:id="@+id/sum_eval_repair"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+    </TableRow>
+ <View
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray" />
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="辅料合计：" />
+
+        <TextView
+            android:id="@+id/sum_eval_assit"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+
+        <TextView
+            style="@style/content_label"
+            android:text="其他费用：" />
+
+        <TextView
+            android:id="@+id/sum_other_fee"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="管理费率：" />
+
+        <TextView
+            android:id="@+id/eval_manage_rate"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+
+        <TextView
+            style="@style/content_label"
+            android:text="管理费：" />
+
+        <TextView
+            android:id="@+id/sum_fits_manage_fee"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="残值合计：" />
+
+        <TextView
+            android:id="@+id/sum_remains"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+
+        <TextView
+            style="@style/content_label"
+            android:text="定损总计：" />
+
+        <TextView
+            android:id="@+id/sum_loss_total"
+            style="@style/content_value_red_highlight"
+            android:text="0" />
+
+        <TextView
+            style="@style/content_label"
+            android:text="工时单价："
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/unit_man_hour_price"
+            style="@style/content_value_red_highlight"
+            android:text="0"
+            android:visibility="gone" />
+    </TableRow>
+     <View
+        android:layout_height="1dip"
+        android:background="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/t_hejia_sum_price"
+            style="@style/content_label"
+            android:visibility="gone"
+            android:text="核价总计："
+             />
+
+        <TextView
+            android:id="@+id/text_hejia_sum_price"
+            style="@style/content_value_red_highlight"
+            android:visibility="gone"
+            android:text="0.0"
+            />
+
+</TableLayout>

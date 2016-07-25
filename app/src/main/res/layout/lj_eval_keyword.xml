@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@color/colorPrimary"
+    android:padding="1.2dp"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:text="关键字查找"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/close_img"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/close_dialog"
+            android:padding="20dip" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/type" >
+
+        <TableRow
+            android:gravity="center_horizontal"
+            android:weightSum="8" >
+
+            <Button
+                android:id="@+id/lj_key1"
+                style="@style/part_keyword"
+                android:text="前" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key2"
+                style="@style/part_keyword"
+                android:text="后" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key3"
+                style="@style/part_keyword"
+                android:text="左" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key4"
+                style="@style/part_keyword"
+                android:text="右" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key5"
+                style="@style/part_keyword"
+                android:text="上" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key6"
+                style="@style/part_keyword"
+                android:text="中" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key7"
+                style="@style/part_keyword"
+                android:text="下" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key8"
+                style="@style/part_keyword"
+                android:text="杠" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.01dp"
+            android:background="@color/black" />
+
+        <TableRow android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/lj_key9"
+                style="@style/part_keyword"
+                android:text="门" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key10"
+                style="@style/part_keyword"
+                android:text="锁" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key11"
+                style="@style/part_keyword"
+                android:text="总" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key12"
+                style="@style/part_keyword"
+                android:text="板" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key13"
+                style="@style/part_keyword"
+                android:text="饰" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key14"
+                style="@style/part_keyword"
+                android:text="开" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key15"
+                style="@style/part_keyword"
+                android:text="窗" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key16"
+                style="@style/part_keyword"
+                android:text="罩" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.01dp"
+            android:background="@color/black" />
+
+        <TableRow android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/lj_key17"
+                style="@style/part_keyword"
+                android:text="壳" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key18"
+                style="@style/part_keyword"
+                android:text="轨" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key19"
+                style="@style/part_keyword"
+                android:text="动" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key20"
+                style="@style/part_keyword"
+                android:text="机" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key21"
+                style="@style/part_keyword"
+                android:text="雨" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key22"
+                style="@style/part_keyword"
+                android:text="水" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key23"
+                style="@style/part_keyword"
+                android:text="电" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key24"
+                style="@style/part_keyword"
+                android:text="火" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.01dp"
+            android:background="@color/black" />
+
+        <TableRow android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/lj_key25"
+                style="@style/part_keyword"
+                android:text="气" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key26"
+                style="@style/part_keyword"
+                android:text="油" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key27"
+                style="@style/part_keyword"
+                android:text="箱" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key28"
+                style="@style/part_keyword"
+                android:text="车" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key29"
+                style="@style/part_keyword"
+                android:text="轮" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key30"
+                style="@style/part_keyword"
+                android:text="轴" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key31"
+                style="@style/part_keyword"
+                android:text="转" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key32"
+                style="@style/part_keyword"
+                android:text="器" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.01dp"
+            android:background="@color/black" />
+
+        <TableRow android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/lj_key33"
+                style="@style/part_keyword"
+                android:text="带" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key34"
+                style="@style/part_keyword"
+                android:text="齿" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key35"
+                style="@style/part_keyword"
+                android:text="梁" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key36"
+                style="@style/part_keyword"
+                android:text="架" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key37"
+                style="@style/part_keyword"
+                android:text="震" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key38"
+                style="@style/part_keyword"
+                android:text="簧" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key39"
+                style="@style/part_keyword"
+                android:text="臂" />
+
+            <View
+                android:layout_width="0.01dp"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/lj_key40"
+                style="@style/part_keyword"
+                android:text="杆" />
+        </TableRow>
+         
+    </TableLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/lj_cancle"
+        android:layout_width="120dip"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/button_color"
+        android:text="取消"
+        android:visibility="gone" />
+
+</LinearLayout>

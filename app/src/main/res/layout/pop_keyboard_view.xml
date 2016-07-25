@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="@color/black"
+        android:orientation="vertical"
+         >
+         <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="@drawable/type"
+        android:layout_margin="1dp"
+        android:orientation="vertical"
+         >
+         <RelativeLayout 
+                android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+                android:background="@color/dialog_bg_gray"
+                android:layout_margin="2dp"
+                >
+            <TextView
+                android:id="@+id/dialog_tilte"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="left|center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:padding="20dip"
+                android:id="@+id/close_imgd"
+                android:visibility="gone"
+                android:background="@drawable/close_dialog" />
+            </RelativeLayout>
+         <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" 
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:background="#00000000"
+         > 
+         
+        <TextView
+            android:id="@+id/text_input_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+             />
+         <EditText
+            android:id="@+id/edit_input_dialog"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/type_edittext"
+             />
+         </LinearLayout>
+    <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="#00000000"
+         >
+
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+             >
+
+            <Button
+				android:id="@+id/keyboard_button7"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="7" />
+            <Button
+                android:id="@+id/keyboard_button8"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/keyboard_button9"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/keyboard_left"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="左移" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/keyboard_button4"
+               android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/keyboard_button5"
+               android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/keyboard_button6"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/keyboard_right"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="右移" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/keyboard_button1"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="1" />
+
+            <Button
+               	android:id="@+id/keyboard_button2"
+               	android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/keyboard_button3"
+               	android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/keyboard_delete"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="删除" />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="10dip"
+            >
+
+            <Button
+                android:id="@+id/keyboard_dian"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="." />
+
+            <Button
+                android:id="@+id/keyboard_button0"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/keyboard_button_"
+               android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="-" />
+<Button
+                android:id="@+id/close_btn"
+               android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="取消" />
+            <Button
+                android:id="@+id/keyboard_ok"
+               android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="确定" />
+
+        </TableRow>
+    </TableLayout>
+      </LinearLayout>
+  </LinearLayout>

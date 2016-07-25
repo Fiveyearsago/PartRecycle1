@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 由车系选择车组 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlay01"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/group_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/text_dx_seriSel"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="5"
+                android:background="@drawable/type"
+                android:drawableRight="@drawable/jian_list"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dip"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <com.jy.recycle.ui.view.CustomerZCSpinner
+                android:id="@+id/dx_seriSel"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="5"
+                android:drawSelectorOnTop="false"
+                android:prompt="@string/proSeri"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imagevBtn_seriSel_chex"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/type"
+                android:src="@drawable/jian_list"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/dx_groupList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dip"></ListView>
+    </LinearLayout>
+</LinearLayout>

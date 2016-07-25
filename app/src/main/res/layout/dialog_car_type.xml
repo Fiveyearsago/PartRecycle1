@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/blueMainText"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/general__shared__ffbcbcbc" />
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_jiaoche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="标准轿车"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/dialog_item_middle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/general__shared__ffbcbcbc" />
+
+        <TextView
+            android:id="@+id/tv_huoche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="标准货车"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/dialog_item_middle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/general__shared__ffbcbcbc" />
+
+        <TextView
+            android:id="@+id/tv_keche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="标准客车"
+            android:textColor="@color/black"
+            android:textSize="16sp" 
+            android:background="@drawable/dialog_item_middle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/general__shared__ffbcbcbc" />
+
+        <TextView
+            android:id="@+id/tv_qita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="其它车型"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/dialog_item_middle" />
+    </LinearLayout>
+
+</LinearLayout>

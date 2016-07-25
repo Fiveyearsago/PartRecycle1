@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surveyEvalBg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/control_show_button_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/color2"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/protone_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/protone"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/surveyEvalBg" />
+
+        <TextView
+            android:id="@+id/brands_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/brands"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/surveyEvalBg" />
+
+        <TextView
+            android:id="@+id/user_defined_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/user_defined"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/brands_content1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/surveyEvalBg" >
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/brands_content2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/surveyEvalBg" >
+    </ScrollView>
+
+</LinearLayout>

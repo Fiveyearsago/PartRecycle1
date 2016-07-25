@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string-array name="v1_sqls">
+        <item>        /*==============================================================*/
+		/* Table: M_EVAL_LOSS_INFO                                          */
+		/*==============================================================*/
+		create table M_EVAL_LOSS_INFO 
+		(
+		   _id integer PRIMARY KEY AUTOINCREMENT               null,
+		   
+		   USER_CODE			varchar(30)						null ,
+		   PASSWORD 			varchar(30)						null , 
+		   REQUEST_TYPE			varchar(10)						null , 
+		   POWER				varchar(60)						null , 
+		   EVAL_RETURN_PAK_URL	varchar(200)					null ,
+		   EVAL_RETURN_CLA_URL	varchar(200)					null ,
+		   
+		   LOSS_NO				varhcar(20) 					null , 
+		   CASE_NO				varchar(20)						null , 
+		   ESTIMATE_NO			varchar(14)						null ,
+		   INSURE_VEHICLE_NAME	varchar(60)						null , 
+		   INSURE_VEHICLE_CODE	varchar(60)						null , 
+		   COM_CODE				varchar(60)						null , 
+		   HANDLER_CODE			varchar(60)						null , 
+		   MAN_HOUR				numeric(16,2)					null ,
+		   VEH_KIND_ID		  VARCHAR(60)						null , 
+		   VEH_KIND_CODE		VARCHAR(60)						null , 
+		   VEH_KIND_NAME		VARCHAR(60)						null , 
+		   VEH_CERTAIN_ID		VARCHAR(60)						null , 
+		   VEH_CERTAIN_CODE		VARCHAR(60)						null , 
+		   VEH_CERTAIN_NAME		VARCHAR(60)						null , 
+		   VEH_GROUP_NAME		VARCHAR(60)						null , 
+		   VEH_GROUP_CODE		VARCHAR(60)						null , 
+		   VEH_SERI_CODE		VARCHAR(60)						null , 
+		   VEH_SERI_NAME		VARCHAR(60)						null , 
+		 
+		   VEH_YEAR_TYPE		VARCHAR(60)						null , 
+		   VEH_FACTORY_CODE		VARCHAR(60)						null , 
+		   VEH_FACTORY_NAME		VARCHAR(60)						null , 
+		   VEH_BRAND_CODE		VARCHAR(60)						null , 
+		   VEH_BRAND_NAME		VARCHAR(60)						null , 
+		   SELF_CONFIG_FLAG		VARCHAR(2)						null , 
+		   
+		   SUM_CHG_COMP_FEE		numeric(16,2)					null ,
+		   SUM_REPAIR_FEE		numeric(16,2)					null ,
+		   SUM_MATERIAL_FEE		numeric(16,2)					null ,
+		   SUM_OTHER_FEE		numeric(16,2)					null ,
+		   SUM_REMNANT			numeric(16,2)					null ,
+		   MANAGE_FEE_RATE		numeric(16,2)					null ,
+		   SUM_LOSS_FEE			numeric(16,2)					null ,
+		   REMARKE				VARCHAR(200)					null ,
+		   REBACK_FLAG 			VARCHAR(2)						null ,
+		   TASK_ID				VARCHAR(200)					null ,
+		   REPAIR_MANAGEMENT    VARCHAR(60)						null ,
+		   COMPANY_TYPE         VARCHAR(60)						null ,
+		   PLATE_NO             VARCHAR(60)						null ,
+		   LOSS_REMNANT          numeric(16,2)					null ,
+		  CARTEXT             VARCHAR(60)						null ,
+		   CARNO              VARCHAR(60)						null ,
+		   PERSON_NAME        VARCHAR(60)						null ,
+		   PERSON_TEL        VARCHAR(60)						null ,
+		   PERSON_ADD         VARCHAR(60)						null ,
+		   REPORT_ONE         VARCHAR(60)						null ,
+		    REPORT_TWO         VARCHAR(60)						null ,
+		    REPORT_THREE         VARCHAR(60)						null ,
+		    USERNAME               VARCHAR(60)						null ,
+		    PASWORD                VARCHAR(60)						null ,
+		    VIN_NO                 VARCHAR(60)						null ,
+		   VEH_SERI_ID         VARCHAR(60)						null,
+		   TI_HUO_SHANG         VARCHAR(60)						null,
+		   CAR_TYPE         VARCHAR(10)						null,
+		     ACTING_BRAND         VARCHAR(60)						null,
+		     MSTATE         VARCHAR(10)						null,
+		     REPORT_FOUR    VARCHAR(10)                     null
+		);
+		</item>
+        <item>         /*==============================================================*/
+		/* Table: M_INSURANCE_ITEM                                           */
+		/*==============================================================*/
+		create table M_INSURANCE_ITEM 
+		(
+		   _id integer PRIMARY KEY AUTOINCREMENT                     null,
+		   EVAL_ID					integer							 null,
+		   INSURE_TERM               VARCHAR (200)                   null,
+		   INSURE_TERM_CODE          VARCHAR (60)                    null
+		);
+		</item>
+        <item>          /*==============================================================*/
+		/* Table: M_ACTINGBRAND_ITEM                                           */
+		/*==============================================================*/
+		create table M_ACTINGBRAND_ITEM 
+		(
+		   _id integer PRIMARY KEY AUTOINCREMENT                     null,
+		   EVAL_ID					integer							 null,
+		   ACTING_BRANDNAME         VARCHAR (200)                   null,
+		   ACTING_BRANDCODE          VARCHAR (60)                    null
+		);
+</item>
+        <item>        /*==============================================================*/
+		/* Table: M_EVAL_REPAIR                                        */
+		/*==============================================================*/
+		create table M_EVAL_REPAIR 
+		(
+			_id integer PRIMARY KEY AUTOINCREMENT               null,
+			EVAL_ID					integer							 null,
+			REPAIR_ID			varchar(32)						null ,
+			SERIAL_NO			numeric(3)						null ,
+			REPAIR_CODE			varchar(10)						null ,
+			REPAIR_NAME			varchar(100)					null ,
+			REPAIR_ITEM_CODE	varchar(20)						null ,
+			REPAIR_ITEM_NAME	varchar(100)					null ,
+			CHG_COMP_SET_CODE		varchar(60)					null ,
+			CHG_COMP_SET_NAME		varchar(60)					null ,
+			LEVEL_CODE			varchar(10)						null ,
+			LEVEL_NAME			varchar(100)					null ,
+			REPAIR_FEE			numeric(16,2)					null ,
+			UNIT_MAN_HOUR_PRICE			numeric(16,2)			null ,
+			MAN_HOUR			numeric(16,2)					null ,
+			INSURE_TERM			varchar(200)					null ,
+			INSURE_TERMCODE		varchar(60)						null ,
+			REMARK				varchar(200)					null ,
+			SELF_CONFIG_FLAG	varchar(2)						null  ,
+		    JY_SYSTEM_ID		VARCHAR(40)						null ,
+		    MANHOUR_NAME         VARCHAR(40)					null ,
+		    MANHOUR_CODE         VARCHAR(40)					null ,
+		    MANHOUR_ID           VARCHAR(40)					null ,
+		    UNITFEE_LOCAL        numeric(16,2)					null ,
+		    DELETE_FLAG         VARCHAR(2)						null
+		);
+		</item>
+        <item>        /*==============================================================*/
+		/* Table: M_EVAL_PART                                           */
+		/*==============================================================*/
+		create table M_EVAL_PART 
+		(
+			_id integer PRIMARY KEY AUTOINCREMENT                        null,
+			EVAL_ID					integer							 null,
+			PART_ID					varchar(32)					null ,
+			SERIAL_NO				numeric(3)					null ,
+			ORIGINAL_ID 			varchar(100)					null ,
+			ORIGINAL_NAME			varchar(100)					null ,
+			PART_STANDARD_CODE		varchar(60)					null ,
+			PART_STANDARD			varchar(60)					null ,
+			PART_GROUP_COD			varchar(60)					null ,
+			PART_GROUP_NAME			varchar(60)					null ,
+			LOSS_PRICE				numeric(16,2)					null ,
+			REPAIR_SITE_PRICE		numeric(16,2)					null ,
+			LOSS_COUNT				numeric(3)					null ,	
+			SUM_PRICE				numeric(16,2)					null ,
+			SELF_CONFIG_FLAG		varchar(2)					null ,
+			CHG_COMP_SET_CODE		varchar(60)					null ,
+			CHG_COMP_SET_NAME		varchar(60)					null ,
+			CHG_REF_PRICE			numeric(16,2)					null ,
+			CHG_LOC_PRICE			numeric(16,2)					null ,
+			REF_PRICE1              numeric(16,2)					null ,   
+			REF_PRICE2              numeric(16,2)					null , 
+			REF_PRICE3              numeric(16,2)					null ,
+			LOC_PRICE1              numeric(16,2)					null ,
+			LOC_PRICE2              numeric(16,2)					null ,
+			LOC_PRICE3              numeric(16,2)					null ,
+			IF_REMAIN				varchar(2)					null ,
+			REMNANT					numeric(16,2)					null ,
+			INSURE_TERM				varchar(200)					null ,
+			INSURE_TERM_CODE		varchar(60)					null ,
+			REMARK					varchar(200)					null ,
+			
+			HEJIA_PRICE             numeric(16,2)                   null ,
+			HEJIA_SUM               numeric(16,2)                 null ,
+			HEJIA_REMARK            varchar(200)                  null ,
+			HEJIA_STATUS            VARCHAR(2)                    null ,
+			FORHEJIA_REMARK         VARCHAR(200)                  null ,
+			CHG_COMP_SET_ID         VARCHAR(60)                    null ,
+		    JY_SYSTEM_ID			VARCHAR(40)						null ,
+		    LOCAL_FLAG          	VARCHAR(2)						null ,
+		     CARE_FLAG          	VARCHAR(2)						null ,
+		    DELETE_FLAG        		 VARCHAR(2)						null,
+		    OLD_DETAIL        	 	VARCHAR(2)						null,
+		    GOOD_LIST_ID         	VARCHAR(60)						null,
+		    EDIT_FLAG         	VARCHAR(2)						null,
+		     HUISHOU_FLAG         	VARCHAR(2)						null
+		);
+		</item>
+        <item>        /*==============================================================*/
+		/* Table: M_EVAL_ASSIST                                           */
+		/*==============================================================*/
+		create table M_EVAL_ASSIST 
+		(
+			_id integer PRIMARY KEY AUTOINCREMENT                        null,
+			EVAL_ID					integer							 null,
+			ASSIST_ID				varchar(32)					null ,
+			SERIAL_NO				numeric(3)					null ,
+			MATERIAL_CODE			varchar(50)					null ,
+			MATERIAL_NAME			varchar(50)					null ,
+			UNIT_PRICE				numeric(16,2)				null ,
+			COUNT					numeric(3)					null ,
+			MATERIAL_FEE			numeric(16,2)				null ,
+			MAN_HOUR         		numeric(16,2)				null ,
+			REF_MAN_HOUR         		numeric(16,2)				null ,
+			INSURE_TERM				varchar(200)				null ,
+			INSURE_TERM_CODE		varchar(60)					null ,
+			REMARK					varchar(200)				null ,
+			SELF_CONFIG_FLAG		varchar(2)					null ,
+			HEJIA_PRICE             numeric(16,2)               null ,
+			HEJIA_SUM               numeric(16,2)               null ,
+			HEJIA_REMARK            VARCHAR(200)                null ,
+			HEJIA_STATUS            VARCHAR(2)                  null ,
+			FORHEJIA_REMARK         VARCHAR(200)                null ,
+		    JY_SYSTEM_ID		VARCHAR(40)						null ,
+		    DELETE_FLAG         VARCHAR(2)						null
+		);
+</item>
+        <item>        /*==============================================================*/
+		/* Table: M_EVAL_FEE                                           */
+		/*==============================================================*/
+		create table M_EVAL_FEE 
+		(
+			_id integer PRIMARY KEY AUTOINCREMENT				null,
+			EVAL_ID					integer						null,
+			OTHER_FEE_ID			varchar(32)					null ,
+			SERIAL_NO				numeric(3)					null ,
+			OTHER_FEE_NAME			varchar(100)				null ,
+			OTHER_FEE				numeric(16,2)				null ,
+			INSURE_TERM				varchar(200)				null ,
+			INSURE_TERM_CODE		varchar(60)					null ,
+			REMARK					varchar(200)				null ,
+		    JY_SYSTEM_ID		VARCHAR(40)						null
+		);
+</item>
+        <item>              /*==============================================================*/
+		/* Table: M_VINNO_QUSTION                                       */
+		/*==============================================================*/
+        create table M_VINNO_QUSTION 
+		(
+		   _id integer PRIMARY KEY AUTOINCREMENT                     null,
+		   EVAL_ID					 integer					     null,
+		   VIN_QUSTION               VARCHAR (60)                    null,
+		   VIN_ANSWRE                VARCHAR (60)                    null,
+		   VIN_QUSTION_ID            VARCHAR (60)		             null
+		   
+		);
+</item>
+        <item>              /*==============================================================*/
+		/* Table: M_REGIST                                       */
+		/*==============================================================*/
+         create table M_REGIST
+		(
+		   _id integer PRIMARY KEY AUTOINCREMENT                     null,
+		   EVAL_ID					 integer					     null,
+		   REGIST_NAME               VARCHAR (60)                    null,
+		   REGIST_PWD                VARCHAR (60)                    null,
+		   REGIST_TEL                VARCHAR (60)		             null,
+		   REGIST_ADDRESS            VARCHAR (100)		             null
+		   
+		);
+</item>
+        <item>              /*==============================================================*/
+		/* Table: M_VINNO_PHONE                                      */
+		/*==============================================================*/
+        create table M_VINNO_PHONE 
+		(
+		   _id integer PRIMARY KEY AUTOINCREMENT                     null,
+		   VIN_QUSTION_ID            VARCHAR (60)		             null,
+		   VIN_PIC_NAME              VARCHAR (60)	                 null,
+		   VIN_PIC_PATH              VARCHAR (60)	                 null,
+		   EVAL_ID                   integer                         null
+		   
+		);
+</item>
+    </string-array>
+    <string-array name="v2_sqls">
+        <item>            alter table M_EVAL_PART add JY_SYSTEM_ID VARCHAR(40) null ;
+</item>
+        <item>            alter table M_EVAL_REPAIR add JY_SYSTEM_ID VARCHAR(40) null ;
+</item>
+        <item>            alter table M_EVAL_ASSIST add JY_SYSTEM_ID VARCHAR(40) null ;
+</item>
+        <item>            alter table M_EVAL_FEE add JY_SYSTEM_ID VARCHAR(40) null ;
+</item>
+    </string-array>
+    <string-array name="v3_sqls">
+        <item>            alter table M_EVAL_LOSS_INFO add TASK_ID VARCHAR(40) null ;
+</item>
+    </string-array>
+    <string-array name="v4_sqls">
+        <item>            alter table M_EVAL_PART add REF_PRICE1 numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add REF_PRICE2 numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add REF_PRICE3 numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add LOC_PRICE1 numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add LOC_PRICE2 numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add LOC_PRICE3 numeric(16,2) null ;
+</item>
+    </string-array>
+    <string-array name="v5_sqls">
+        <item>            alter table M_EVAL_LOSS_INFO add REBACK_FLAG VARCHAR(2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add HEJIA_PRICE numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add HEJIA_SUM numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add HEJIA_REMARK VARCHAR(200) null ;
+</item>
+        <item>            alter table M_EVAL_PART add HEJIA_STATUS VARCHAR(2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add FORHEJIA_REMARK VARCHAR(200) null ;
+</item>
+        <item>            alter table M_EVAL_PART add CHG_COMP_SET_ID VARCHAR(60) null ;
+</item>
+    </string-array>
+    <string-array name="v6_sqls">
+        <item>            alter table M_EVAL_ASSIST add HEJIA_PRICE numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_ASSIST add HEJIA_SUM numeric(16,2) null ;
+</item>
+        <item>            alter table M_EVAL_ASSIST add HEJIA_REMARK VARCHAR(200) null ;
+</item>
+        <item>            alter table M_EVAL_ASSIST add HEJIA_STATUS VARCHAR(2) null ;
+</item>
+        <item>            alter table M_EVAL_ASSIST add FORHEJIA_REMARK VARCHAR(200) null ;
+</item>
+    </string-array>
+    <string-array name="v7_sqls">
+        <item>            alter table M_EVAL_PART add LOCAL_FLAG VARCHAR(2) null ;
+</item>
+    </string-array>
+    <string-array name="v8_sqls">
+        <item>            alter table M_EVAL_LOSS_INFO add VEH_SERI_ID VARCHAR(60) null ;
+</item>
+        <item>            alter table M_EVAL_LOSS_INFO add TI_HUO_SHANG VARCHAR(60) null ;
+</item>
+        <item>            alter table M_EVAL_LOSS_INFO add CAR_TYPE VARCHAR(10) null ;
+</item>
+        <item>            alter table M_EVAL_LOSS_INFO add MSTATE VARCHAR(10) null ;
+</item>
+        <item>            alter table M_EVAL_PART add OLD_DETAIL VARCHAR(2) null ;
+</item>
+        <item>            alter table M_EVAL_PART add GOOD_LIST_ID VARCHAR(60) null ;
+</item>
+        <item>            alter table M_EVAL_LOSS_INFO add ACTING_BRAND VARCHAR(60) null ;
+</item>
+        <item>            alter table M_EVAL_LOSS_INFO add REPORT_FOUR VARCHAR(10) null ;
+</item>
+    </string-array>
+    <string-array name="v9_sqls">
+        <item>            alter table M_EVAL_PART add  EDIT_FLAG VARCHAR(2)	null ;
+</item>
+    </string-array>
+    <string-array name="v11_sqls">
+        <item>            alter table M_EVAL_PART add  HUISHOU_FLAG VARCHAR(2)	null ;
+</item>
+    </string-array>
+	<string-array name="v12_sqls">
+        <item>            alter table M_EVAL_LOSS_INFO add  REPAIR_FLAG VARCHAR(2)	null ;
+</item>
+	</string-array>
+</resources>

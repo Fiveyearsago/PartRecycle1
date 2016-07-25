@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 修理项目子项显示，隐藏ID -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip" 
+    android:background="@color/white"
+	android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/xl_selBox"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        android:focusable="false"
+        android:clickable="false" />
+
+    <TextView
+        android:id="@+id/xl_selName"
+        android:layout_width="500dip"
+        android:layout_weight="3"
+        android:layout_height="60dip"
+        android:text="修理名称"
+        android:gravity="center|left"
+        android:textColor="@color/black"
+        android:textSize="18sp" >
+    </TextView>
+
+		<TextView android:id="@+id/xl_count"
+			android:layout_width="150dip"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:gravity="center_vertical"
+			android:textColor="@color/black"
+			android:text="0.0"
+			android:background="@color/white"
+			android:textSize="18sp"
+			android:visibility="gone"
+			android:enabled="false">
+		</TextView>
+		<TextView android:id="@+id/xl_unit_price"
+			android:layout_width="150dip"
+			android:layout_weight="1"
+			android:layout_height="fill_parent"
+			android:textColor="@color/black"
+			android:hint="0.0"
+			android:visibility="gone"
+			android:gravity="center"
+			android:textSize="18sp"
+			android:enabled="true">
+		</TextView>
+		
+		
+		<TextView android:id="@+id/xl_sum"
+			android:layout_width="150dip"
+			android:layout_weight="1"
+			android:layout_height="fill_parent"
+			android:textColor="@color/black"
+			android:text="0.0"
+			android:gravity="center"
+			android:visibility="gone"
+			android:textSize="18sp"
+			android:background="@null"
+			android:enabled="false">
+		</TextView>
+<!--     <TextView -->
+<!--         android:id="@+id/xl_selId" -->
+<!--         android:layout_width="0px" -->
+<!--         android:layout_height="0px" -->
+<!--         android:textColor="@color/black" > -->
+<!--     </TextView> -->
+
+<!--     <TextView -->
+<!--         android:id="@+id/xl_selIndex" -->
+<!--         android:layout_width="0px" -->
+<!--         android:layout_height="0px" -->
+<!--         android:textColor="@color/black" > -->
+<!--     </TextView> -->
+
+<!--     <TextView -->
+<!--         android:id="@+id/tv_insureTerm" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:layout_alignParentRight="true" -->
+<!--         android:gravity="center_vertical" -->
+<!--         android:textColor="@color/black" /> -->
+
+</LinearLayout>

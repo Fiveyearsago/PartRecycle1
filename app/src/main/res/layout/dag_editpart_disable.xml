@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/dialog_tilte"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/blueMainText"
+                android:gravity="center"
+                android:text="修改零件信息"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="配件名称" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/eval_part_original_name"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:hint="自动带入"
+                        android:enabled="false"
+                        android:textColor="@color/blueMainText" />
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="原厂编码" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <EditText
+                        android:id="@+id/eval_part_original_id"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:enabled="false"
+                        android:hint="自动带入"
+                        android:textColor="@color/blueMainText" />
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="备注信息" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        android:id="@+id/addpart_ljbz"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:hint="不必录"
+                        android:enabled="false"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/blueMainText" >
+                        
+                    </TextView>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="1"
+                        android:text="关注" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+                    
+
+                   <com.jy.recycle.ui.view.SlipButton
+                    android:id="@+id/check_invoiceFlag"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/eval_survey_other"
+                    android:enabled="false"
+                    android:clickable="false"
+                     android:layout_weight="2"
+                    android:hint="" >
+                </com.jy.recycle.ui.view.SlipButton>
+                </LinearLayout>
+
+                <View
+                    style="@style/dialog_info_horizontal"
+                    android:background="@color/black"
+                 />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="二维码"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        android:id="@+id/result"
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:textColor="@color/blueMainText" >
+                    </TextView>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/button_photo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="拍照"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <View
+                        style="@style/dialog_info_vertical"
+                        android:layout_weight="0.015" />
+
+                    <TextView
+                        style="@style/dialog_info_left"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:textColor="@color/blueMainText" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.jy.recycle.ui.view.MyGridView
+                        android:id="@+id/gridView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:horizontalSpacing="10dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="10dp" >
+                    </com.jy.recycle.ui.view.MyGridView>
+                </LinearLayout>
+
+                <View style="@style/dialog_info_horizontal" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <Button
+                    android:id="@+id/dialog_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="保存"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/dialog_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="删除"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/dialog_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="放弃"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

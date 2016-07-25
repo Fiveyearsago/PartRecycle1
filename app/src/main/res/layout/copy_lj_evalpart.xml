@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 换件项目主页面 -->
+<com.jy.recycle.ui.view.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboardLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#d7e2e4"
+    android:orientation="vertical" >
+
+     <FrameLayout
+        android:id="@+id/titlebasr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/menu_title_bg"
+        android:orientation="horizontal" >
+
+
+        <Button
+            android:id="@+id/menu_title_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/menu_tilte_right_buttonbg"
+            android:text="筛选"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+       
+    </FrameLayout>
+    
+       <include
+        android:id="@+id/titlebar"
+        android:layout_alignParentTop="true"
+        layout="@layout/copy_title_bar" />
+
+    <TextView
+        android:id="@+id/pageNo"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:visibility="invisible" />
+
+    <!-- <ScrollView -->
+    <!-- android:layout_below="@+id/titlebar" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent"> -->
+
+    <LinearLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/partcontrollayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/contral_show_title_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contral_show_title_bg"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="险别"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/eval_insurance_term"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:drawSelectorOnTop="false" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="@color/white"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1.2"
+                            android:background="@color/color2"
+                            android:gravity="center"
+                            android:text="价格方案 "
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/part_spnJgfa"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:drawSelectorOnTop="false"
+                            android:prompt="@string/proJgfa"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textBtn_priceSource_chex"
+                            android:layout_width="0dp"
+                            android:layout_height="55dip"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:hint="必选项"
+                            android:textColor="@color/blueMainText"
+                            android:textSize="16sp" >
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/imagevBtn_priceSource_chex"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.8"
+                            android:src="@drawable/arrow_to_right" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:id="@+id/part_btn_auto"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_weight="1"
+                            android:background="@color/button_color"
+                            android:gravity="center"
+                            android:text="自定义"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" >
+                        </TextView>
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white" />
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/button_color"
+                    android:gravity="center" >
+
+                    <TableRow android:gravity="center_horizontal" >
+
+                        <Button
+                            android:id="@+id/part_ljfz"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="零件组"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white" />
+
+                        <Button
+                            android:id="@+id/part_btn_gjz"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="字"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white" />
+
+                        <Button
+                            android:id="@+id/part_btn_ljmc"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="名"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white" />
+
+                        <Button
+                            android:id="@+id/part_btn_pz"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="碰"
+                            android:textSize="16sp" />
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/showList"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TableLayout
+                android:id="@+id/TableLayout03"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" >
+
+                <View
+                    android:layout_height="2dip"
+                    android:layout_marginTop="10dip"
+                    android:background="#7F7F7F" />
+
+                <TableRow android:background="@color/color2" >
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="选择"
+                        android:visibility="gone"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="项目名称"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="系统价格"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="本地价格"
+                        android:textColor="@color/white" />
+                </TableRow>
+
+                <View
+                    android:layout_height="1dip"
+                    android:background="#FF909090" />
+            </TableLayout>
+
+            <ListView
+                android:id="@+id/part_partList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dip"
+                android:cacheColorHint="@android:color/transparent"
+                android:scrollingCache="false" >
+            </ListView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dip"
+                android:background="@drawable/eval_new_downline"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ds_linBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/part_btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/select_before" />
+
+        <ImageButton
+            android:id="@+id/part_btn_zdy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/zdy_before" />
+    </LinearLayout>
+
+    <!-- </ScrollView> -->
+
+</com.jy.recycle.ui.view.ResizeLayout>

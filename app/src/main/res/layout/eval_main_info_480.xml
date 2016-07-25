@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:shrinkColumns="1,2"
+    android:stretchColumns="1,2" >
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="定损单号：" />
+
+        <TextView
+            android:id="@+id/loss_no"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@drawable/eval_new_downline" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="事故号：" />
+
+        <TextView
+            android:id="@+id/case_no"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@drawable/eval_new_downline" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="估损单号：" />
+
+        <TextView
+            android:id="@+id/estimate_no"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@drawable/eval_new_downline" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="工时单价：" />
+
+        <TextView
+            android:id="@+id/man_hour"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@drawable/eval_new_downline" />
+
+    <TableRow style="@style/content_row" 
+        
+        >
+
+        <TextView
+            android:singleLine="true"
+            style="@style/content_label"
+            android:text="承保车型代码:" />
+
+        <TextView
+            android:id="@+id/insurance_vehicle_code"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@drawable/eval_new_downline" />
+
+    <TableRow style="@style/content_row" 
+        >
+        <TextView
+            style="@style/content_label"
+            android:singleLine="true"
+            android:text="承保车型名称:" />
+
+        <TextView
+            android:id="@+id/insurance_vehicle_name"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@drawable/eval_new_downline" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="分公司代码：" />
+
+        <TextView
+            android:id="@+id/com_code"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="@drawable/eval_new_downline" />
+
+    <TableRow style="@style/content_row" >
+
+        <TextView
+            style="@style/content_label"
+            android:text="定损员代码：" />
+
+        <TextView
+            android:id="@+id/handler_code"
+            style="@style/content_value_red_highlight" />
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 修理项目编辑 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1,2,3,4"
+        android:stretchColumns="1,2,3,4" >
+
+        <TextView
+            android:id="@+id/dialog_tilte"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/blueMainText"
+            android:gravity="center"
+            android:text="修改辅料项目"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="辅料名称"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/assist_name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numeric="decimal"
+                android:text=""
+                android:textColor="@color/dilaogColor" >
+            </EditText>
+
+            <TextView
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:text="险别名称:"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/assist_insure_term"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone" >
+            </TextView>
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="辅料单价"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/assist_price"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numeric="decimal"
+                android:text=""
+                android:textColor="@color/blueMainText" >
+            </EditText>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/pic_edit" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="辅料数量"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/assist_num"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numeric="integer"
+                android:text=""
+                android:textColor="@color/blueMainText" >
+            </EditText>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/pic_edit" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="辅料金额"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/assist_total"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blueMainText" >
+            </TextView>
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+   
+
+   
+
+        <TableRow android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="辅料备注"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/assist_remark"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text=""
+                android:textColor="@color/blueMainText" >
+            </EditText>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/pic_edit" />
+        </TableRow>
+ </TableLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <TableLayout
+        android:id="@+id/layout_assist_hejia"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:shrinkColumns="1,2,3,4"
+        android:stretchColumns="1,2,3,4"
+        android:visibility="gone" >
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="核价状态:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/eval_assist_hejia_status"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:gravity="left"
+                android:text="核价金额:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/eval_assist_hejia_price"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:text="核价意见:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/eval_assist_hejia_remark"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dilaogColor" >
+
+        <Button
+            android:id="@+id/dialog_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="保存"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+         <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/dialog_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="删除"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/dialog_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
