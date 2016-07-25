@@ -1658,6 +1658,9 @@ public class EvalActivity extends JyBaseActivity implements DialogUtil.DialogCal
         builder.show();
 
     }
+    public void test(){
+
+    }
 
     private String commitContent() {
         EvalLossInfo eInfo = evalLossInfoAction.getEvalLossInfoByEvalId(evalId);
