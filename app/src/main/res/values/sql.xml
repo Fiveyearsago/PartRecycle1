@@ -72,7 +72,8 @@
 		   CAR_TYPE         VARCHAR(10)						null,
 		     ACTING_BRAND         VARCHAR(60)						null,
 		     MSTATE         VARCHAR(10)						null,
-		     REPORT_FOUR    VARCHAR(10)                     null
+		     REPORT_FOUR    VARCHAR(10)                     null,
+			REPAIR_FLAG     VARCHAR(2)                     null
 		);
 		</item>
         <item>         /*==============================================================*/

@@ -217,7 +217,7 @@ public class EvalLossInfoDao extends BaseDao {
 						.getColumnIndex(Columns.VEH_YEAR_TYPE)));
 				evalLossInfo.setSelfConfigFlag(cursor.getString(cursor
 						.getColumnIndex(Columns.SELF_CONFIG_FLAG)));
-				// 备注
+				// 基本信息
 				evalLossInfo.setCarNo(cursor.getString(cursor
 						.getColumnIndex(Columns.CARNO)));
 				evalLossInfo.setPersonName(cursor.getString(cursor

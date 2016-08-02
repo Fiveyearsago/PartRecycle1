@@ -773,7 +773,7 @@ public class EvalActivity3 extends JyBaseActivity  implements DialogUtil.DialogC
 							i.putExtra("content", commitContent());
 							startActivity(i);
 						}
-
+						
 					}
 				}
 			}

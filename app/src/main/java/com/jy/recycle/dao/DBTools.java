@@ -24,7 +24,7 @@ public class DBTools {
 	// 数据库名称为data
 	private static final String DB_NAME = "recycle.db";
 	// 数据库版本
-	private static final int DB_VERSION =12;
+	private static final int DB_VERSION =13;
 	// 创建一个表
 	// 用户相关表
 	// 执行open（）打开数据库时，保存返回的数据库对象
@@ -136,7 +136,7 @@ public class DBTools {
 				
 			}
 			try{
-				if(oldVersion < 9){//低于版本8的数据，升级到版本8
+				if(oldVersion < 9){//低于版本9的数据，升级到版本9
 					String[] v8Sqls = context.getResources().getStringArray(
 							R.array.v8_sqls);
 					for (String sql : v8Sqls) {
@@ -169,7 +169,7 @@ public class DBTools {
 				
 			}
 			try{
-				if(oldVersion < 12){//低于版本11的数据，升级到版本11
+				if(oldVersion < 13){//低于版本12的数据，升级到版本12
 					String[] v12Sqls = context.getResources().getStringArray(
 							R.array.v12_sqls);
 					for (String sql : v12Sqls) {
