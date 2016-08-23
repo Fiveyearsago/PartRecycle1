@@ -108,6 +108,7 @@ import com.jy.recycle.util.mutiphotochoser.constant.Constant;
 import com.jy.recycle.util.mutiphotochoser.utils.DisplayUtils;
 import com.jy.recycle.zxing.UploadPicActivity;
 import com.jy.recycle.zxing.saomiao.MipcaActivityCapture;
+import com.jy.zbar.ZBarCaptureActivity;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -1194,7 +1195,7 @@ public class EvalActivity7 extends JyBaseActivity  implements DialogUtil.DialogC
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent();
-				intent.setClass(EvalActivity7.this, MipcaActivityCapture.class);
+				intent.setClass(EvalActivity7.this, ZBarCaptureActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
 			}

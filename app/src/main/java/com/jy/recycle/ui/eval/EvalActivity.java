@@ -93,6 +93,7 @@ import com.jy.recycle.util.mutiphotochoser.constant.Constant;
 import com.jy.recycle.util.mutiphotochoser.utils.DisplayUtils;
 import com.jy.recycle.zxing.UploadPicActivity;
 import com.jy.recycle.zxing.saomiao.MipcaActivityCapture;
+import com.jy.zbar.ZBarCaptureActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -374,6 +375,15 @@ public class EvalActivity extends JyBaseActivity implements DialogUtil.DialogCal
                             mHandler.sendMessage(message);
                         }
                     });
+//                    QRCodeUtil.getZBarString(images, context, new QRCodeUtil.QRCodeCallBack() {
+//                        @Override
+//                        public void response(String recode) {
+//                            Message message = new Message();
+//                            message.what = 2;
+//                            message.obj = recode;
+//                            mHandler.sendMessage(message);
+//                        }
+//                    });
                 }
                 break;
             case REQUEST_PICK_PHOTO:
@@ -1004,7 +1014,8 @@ public class EvalActivity extends JyBaseActivity implements DialogUtil.DialogCal
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent();
-                    intent.setClass(EvalActivity.this, MipcaActivityCapture.class);
+//                    intent.setClass(EvalActivity.this, MipcaActivityCapture.class);
+                    intent.setClass(EvalActivity.this, ZBarCaptureActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
                 }

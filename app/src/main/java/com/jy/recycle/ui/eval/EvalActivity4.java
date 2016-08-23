@@ -98,6 +98,7 @@ import com.jy.recycle.util.mutiphotochoser.constant.Constant;
 import com.jy.recycle.util.mutiphotochoser.utils.DisplayUtils;
 import com.jy.recycle.zxing.UploadPicActivity;
 import com.jy.recycle.zxing.saomiao.MipcaActivityCapture;
+import com.jy.zbar.ZBarCaptureActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -1110,7 +1111,7 @@ public class EvalActivity4 extends JyBaseActivity implements DialogUtil.DialogCa
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(EvalActivity4.this, MipcaActivityCapture.class);
+                intent.setClass(EvalActivity4.this, ZBarCaptureActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
             }

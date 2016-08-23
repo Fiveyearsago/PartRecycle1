@@ -109,6 +109,7 @@ import com.jy.recycle.util.mutiphotochoser.constant.Constant;
 import com.jy.recycle.util.mutiphotochoser.utils.DisplayUtils;
 import com.jy.recycle.zxing.UploadPicActivity;
 import com.jy.recycle.zxing.saomiao.MipcaActivityCapture;
+import com.jy.zbar.ZBarCaptureActivity;
 
 /**
  * 中华联合 主页面
@@ -994,7 +995,7 @@ public class EvalActivity3 extends JyBaseActivity  implements DialogUtil.DialogC
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent();
-				intent.setClass(EvalActivity3.this, MipcaActivityCapture.class);
+				intent.setClass(EvalActivity3.this, ZBarCaptureActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
 			}

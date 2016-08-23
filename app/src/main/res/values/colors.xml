@@ -7,6 +7,7 @@
 	<color name="colorPrimary">#20C6C6</color>
 	<color name="colorPrimaryDark">#3c8383</color>
 	<color name="colorAccent">#20C6C6</color>
+	<color name="navigationBarColor">#20C6C6</color>
     <color name="gray">#dddddd</color>
     <color name="image_selected_color">#7f000000</color>
     <color name="transparent">#00000000</color>

@@ -348,6 +348,45 @@
                             android:hint="请选择提货商"
                             android:singleLine="true" />
                     </LinearLayout>
+                    <View
+                        android:layout_height="1dip"
+                        android:background="@android:color/darker_gray" />
+                    <LinearLayout
+                        style="@style/content_row"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/content_label"
+                            android:layout_width="wrap_content"
+                            android:text="@string/repair_flag"
+                            android:textSize="15sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioRepairGroup"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/radioRepairYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:checked="true"
+                                android:text="@string/repair_4s"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioRepairNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:text="@string/repair_normal"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+                    </LinearLayout>
 
                     <View
                         android:layout_height="1dip"
