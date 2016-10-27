@@ -437,11 +437,13 @@ public class UploadPicActivity extends AppCompatActivity {
 						+ context.getString(R.string.dir)
 						+ context.getString(R.string.img_dir);
 				FileOperate.delAllFile(PATH);
-				deleteEvalInfo(evalId);
-				QuestionDetailsDao detailsDao = QuestionDetailsDao
-						.getInstance();
-
-				detailsDao.deleteId(evalId);
+//				deleteEvalInfo(evalId);
+//				QuestionDetailsDao detailsDao = QuestionDetailsDao
+//						.getInstance();
+//
+//				detailsDao.deleteId(evalId);
+				EvalLossInfoAction action=new EvalLossInfoAction(context);
+				action.deleteAllEvalInfo();
 //				finish();
 //				Intent intent = new Intent(getApplicationContext(),SearchActivity.class);
 //				startActivity(intent);

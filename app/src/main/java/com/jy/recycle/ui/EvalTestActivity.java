@@ -215,9 +215,9 @@ public class EvalTestActivity extends AppCompatActivity {
 								mIntent.setClass(EvalTestActivity.this,
 										SearchActivity.class);
 								mIntent.putExtra("responseData", responseData);
-								EvalLossInfoAction action = new EvalLossInfoAction(
-										EvalTestActivity.this);
-								action.deleteAllEvalInfo();
+//								EvalLossInfoAction action = new EvalLossInfoAction(
+//										EvalTestActivity.this);
+//								action.deleteAllEvalInfo();
 								startActivity(mIntent);
 								finish();
 							} else {

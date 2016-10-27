@@ -78,8 +78,8 @@ public class IFCService {
 		
 		return data ; 
 	}
-	
-	public static String convertStreamToString(InputStream is) throws Exception{   
+
+	public static String convertStreamToString(InputStream is) throws Exception{
 	      StringBuilder sb = new StringBuilder();     
 	      String line = null;   
 	      InputStreamReader isr = null ; 

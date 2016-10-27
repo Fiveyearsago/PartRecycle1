@@ -57,14 +57,11 @@ import com.jy.recycle.util.SharedData;
 import com.jy.recycle.util.SpinnerItem;
 import com.jy.recycle.util.XMLUtil;
 
-import org.apache.http.HttpConnection;
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.InputStreamEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
@@ -79,9 +76,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.SocketTimeoutException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -1367,11 +1362,31 @@ public class ServerApiManager {
      * @return
      */
     public final static Response getListVehDataByName(String vehName,
-                                                      String VinFlag, int pageNo) {
+                                                       String VinFlag, int pageNo) {
         QtSearchVehicleDTO dto = new QtSearchVehicleDTO();
         dto.setPpmc(vehName);
         dto.setVinFlag(VinFlag);
         return getResponse(dto, "003005");
+    }
+    public static JSONObject downloadAddress(String userName,String cxmc){
+        String path = Constants.URL_UPLOAD + "pjhsAppDataInteractionServlet";
+        JSONObject dataJson = null;
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("flag", "0650");
+            JSONObject jsonObject1 = new JSONObject();
+            jsonObject1.put("username", userName);
+            jsonObject1.put("cxmc", cxmc);
+            jsonObject.put("data", jsonObject1);
+            Log.i("jsonObject", jsonObject.toString());
+            // 向服务器请求并获得返回数据
+            String msg = sendData(jsonObject.toString(), path);
+            // 解析
+            dataJson = new JSONObject(msg);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dataJson;
     }
 
     /**

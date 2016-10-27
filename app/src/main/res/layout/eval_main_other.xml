@@ -259,6 +259,8 @@
                             android:layout_weight="1"
                             android:background="@null"
                             android:ellipsize="end"
+                            android:clickable="true"
+                            android:editable="false"
                             android:hint="请输入联系地址"
                             android:singleLine="true" />
 

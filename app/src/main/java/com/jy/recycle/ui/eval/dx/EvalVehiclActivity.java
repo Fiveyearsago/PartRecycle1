@@ -177,7 +177,7 @@ public class EvalVehiclActivity extends JyBaseActivity {
 				data = new ArrayList<Map<String, String>>();
 				new GetVehicleListByVehicleNameTask().execute();
 			} else {
-				Toast.makeText(getApplicationContext(), "请输入名称或VIN码", 1).show();
+				Toast.makeText(getApplicationContext(), "请输入名称或VIN码", Toast.LENGTH_SHORT).show();
 			}
 
 			break;
@@ -657,6 +657,8 @@ public class EvalVehiclActivity extends JyBaseActivity {
 			}
 			Response response = ServerApiManager.getListVehDataByName(vehName,
 					flag, pageno);
+//			Response response = ServerApiManager.getNewListVehDataByName(vehName,
+//					flag, pageno);
 			return response;
 		}
 

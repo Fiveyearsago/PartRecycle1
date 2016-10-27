@@ -1084,6 +1084,11 @@ public class SharedData {
 		SharedPreferences eval = context.getSharedPreferences("bxgsgz", 0);
 		eval.edit().putString("bxgsgz", bxgsgz).commit();
 	}
+	public void saveSfid(String sfid) {
+		// TODO 保存报案号规则
+		SharedPreferences eval = context.getSharedPreferences("sfid", 0);
+		eval.edit().putString("sfid", sfid).commit();
+	}
 	public String getBxgsgz() {
 		SharedPreferences eval = context.getSharedPreferences("bxgsgz", 0);
 		return eval.getString("bxgsgz", null);
@@ -1096,5 +1101,9 @@ public class SharedData {
 	public String getSfcp() {
 		SharedPreferences eval = context.getSharedPreferences("sfcp", 0);
 		return eval.getString("sfcp", null);
+	}
+	public String getSfid() {
+		SharedPreferences eval = context.getSharedPreferences("sfid", 0);
+		return eval.getString("sfid", null);
 	}
 }

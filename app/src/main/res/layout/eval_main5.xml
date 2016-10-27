@@ -274,6 +274,8 @@
                             style="@style/content_value_red_highlight"
                             android:layout_width="0dp"
                             android:layout_weight="1"
+                            android:clickable="true"
+                            android:editable="false"
                             android:background="@null"
                             android:ellipsize="end"
                             android:hint="请输入联系地址"

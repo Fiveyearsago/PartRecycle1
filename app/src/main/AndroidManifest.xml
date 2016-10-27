@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jy.recycle"
-    android:installLocation="preferExternal"
-   >
+    android:installLocation="preferExternal">
 
     <supports-screens android:largeScreens="true" />
 
@@ -13,9 +12,6 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
-
-    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -26,41 +22,35 @@
     <uses-permission android:name="android.permission.REORDER_TASKS" />
 
     <!-- 这个权限用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
     <!-- 这个权限用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
     <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
     <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
     <!-- 用于读取手机当前的状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
     <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     <uses-permission android:name="com.android.providers.contacts.CallLogProvider" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    FLASHLIGHT
     <application
-        android:name="com.jy.recycle.ui.EvalApplication"
+        android:name=".ui.EvalApplication"
         android:allowBackup="true"
         android:icon="@drawable/huishou"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="BUG_HD_SDK_GENERAL_KEY"
             android:value="57220eaa00fc74258b00002c" />
-        
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" >
-        </service>
+            android:process=":remote"></service>
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
@@ -74,10 +64,10 @@
 
         <service
             android:name="com.umeng.update.net.DownloadingService"
-            android:process=":DownloadingService" >
-        </service>
+            android:process=":DownloadingService"></service>
 
-        <activity android:name="com.jy.recycle.util.mutiphotochoser.GalleryActivity"
+        <activity
+            android:name=".util.mutiphotochoser.GalleryActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="com.jy.recycle.action.CHOSE_PHOTOS" />
@@ -87,79 +77,71 @@
         </activity>
         <activity
             android:name="com.umeng.update.UpdateDialogActivity"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.EvalActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:name=".ui.eval.EvalActivity"
             android:allowBackup="true"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.EvalOtherActivity"
+            android:name=".ui.eval.EvalOtherActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.EvalActivity2"
+            android:name=".ui.eval.EvalActivity2"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.EvalActivity3"
+            android:name=".ui.eval.EvalActivity3"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.EvalActivity4"
+            android:name=".ui.eval.EvalActivity4"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.EvalActivity5"
+            android:name=".ui.eval.EvalActivity5"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/AppTheme">
-        </activity>
-          <activity
-            android:name="com.jy.recycle.ui.eval.EvalActivity6"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name=".ui.eval.EvalActivity6"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-              android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.EvalActivity7"
+            android:name=".ui.eval.EvalActivity7"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"></activity>
         <activity
-            android:name="com.jy.recycle.ui.EvalTestActivity"
+            android:name=".ui.EvalTestActivity"
+            android:allowBackup="true"
             android:label="@string/app_name"
-            android:allowBackup="true"
             android:supportsRtl="true"
-            android:windowSoftInputMode="adjustResize|stateHidden"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-           <!--  <intent-filter>
+            <!--
+            <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.VIEW" />
@@ -168,106 +150,92 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="jyeval" />
-            </intent-filter> -->
+            </intent-filter>
+            -->
         </activity>
-        <!--<activity-->
-            <!--android:name="com.jy.recycle.ui.eval.EvalListActivity"-->
-            <!--android:configChanges="keyboardHidden|orientation"-->
-            <!--android:screenOrientation="portrait" >-->
-        <!--</activity>-->
+        <!-- <activity -->
+        <!-- android:name="com.jy.recycle.ui.eval.EvalListActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation" -->
+        <!-- android:screenOrientation="portrait" > -->
+        <!-- </activity> -->
         <activity
-            android:name="com.jy.recycle.ui.eval.dx.BrandDialogActivity"
+            android:name=".ui.eval.dx.BrandDialogActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.dx.GroupSelectActivity"
+            android:name=".ui.eval.dx.GroupSelectActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/DialogTheme"
-            >
-        </activity>
+            android:theme="@style/DialogTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.dx.EvalVehiclActivity"
+            android:name=".ui.eval.dx.EvalVehiclActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.part.EvalPartActivity"
+            android:name=".ui.eval.part.EvalPartActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.part.StandardPartActivity"
+            android:name=".ui.eval.part.StandardPartActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-        </activity>
-        <!--<activity-->
-            <!--android:name="com.jy.recycle.ui.eval.picture.EvalImgPartActivity"-->
-            <!--android:configChanges="keyboardHidden|orientation"-->
-            <!--android:screenOrientation="portrait" >-->
-        <!--</activity>-->
+            android:theme="@style/AppTheme"></activity>
+        <!-- <activity -->
+        <!-- android:name="com.jy.recycle.ui.eval.picture.EvalImgPartActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation" -->
+        <!-- android:screenOrientation="portrait" > -->
+        <!-- </activity> -->
         <activity
-            android:name="com.jy.recycle.ui.eval.part.PartGroupSelectActivity"
+            android:name=".ui.eval.part.PartGroupSelectActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:theme="@style/DialogTheme" >
-        </activity>
+            android:theme="@style/DialogTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.view.KeydemoActivity"
+            android:name=".ui.view.KeydemoActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:theme="@style/DialogTheme" >
-        </activity>
-
+            android:theme="@style/DialogTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.eval.photo.PhotoPicActivity"
+            android:name=".ui.eval.photo.PhotoPicActivity"
             android:configChanges="orientation|keyboard|keyboardHidden"
             android:screenOrientation="sensor"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
-            android:name="com.jy.recycle.zxing.saomiao.MipcaActivityCapture"
+            android:name=".zxing.saomiao.MipcaActivityCapture"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity
-            android:name="com.jy.recycle.zxing.UploadPicActivity"
+            android:name=".zxing.UploadPicActivity"
             android:label="@string/app_name"
             android:theme="@style/DialogTheme"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
-
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
 
         <!-- 清除数据服务 -->
-        <service android:name="com.jy.recycle.service.ClearDataService" />
+        <service android:name=".service.ClearDataService" />
 
         <activity
-            android:name="com.jy.recycle.ui.eval.pick.PickActivity"
+            android:name=".ui.eval.pick.PickActivity"
             android:label="@string/title_activity_pick"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
-            android:name="com.jy.recycle.ui.SearchActivity"
+            android:name=".ui.SearchActivity"
+            android:allowBackup="true"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_search"
             android:launchMode="singleTask"
-            android:allowBackup="true"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme" >
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name="com.jy.zbar.ZBarCaptureActivity"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".ui.eval.SelectAddressActivity"
+            android:launchMode="singleTop"></activity>
     </application>
-FLASHLIGHT
 
 </manifest>

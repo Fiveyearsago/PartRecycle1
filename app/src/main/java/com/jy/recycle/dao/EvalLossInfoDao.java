@@ -468,7 +468,21 @@ public class EvalLossInfoDao extends BaseDao {
 			db.endTran();
 		}
 	}
-
+	public void deleteAllCompletedEvalInfo() {
+		String[] arg = { String.valueOf(-1) };
+		try {
+			db.beginTran();
+			db.delete(TABLE, "_id<>?", arg);
+			db.delete(PART_TABLE, "_id<>?", arg);
+			db.delete(TABLE_PHPTO, "_id<>?", arg);
+			db.setTranSuc();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (db!=null)
+				db.endTran();
+		}
+	}
 	public long initInsertEvalInfo() {
 		// TODO Auto-generated method stub
 		ContentValues values = new ContentValues();

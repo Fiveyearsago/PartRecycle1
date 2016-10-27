@@ -41,7 +41,7 @@ import com.jy.recycle.ui.view.pickerview.listener.OnDateSetListener;
 import com.jy.recycle.util.SharedData;
 import com.umeng.analytics.MobclickAgent;
 
-public class PickActivity extends AppCompatActivity {
+public class PickActivity extends AppCompatActivity implements OnClickListener {
     private Button mBtnBack;
     private TextView mBtnSelect;
     private int TIHUO_REQUEST_CODE = 4;
@@ -52,15 +52,16 @@ public class PickActivity extends AppCompatActivity {
     private Context context = this;
     private SharedData share = new SharedData(context);
     private String tihuoJson = "";// 提货商Json数据
-    private TextView mTextTime;// 截止时间
+    private TextView mTextTime,mStartTime;// 截止时间
     private Button mSelectTime;// 选择截止时间
     private Button mBtnKuaipei;// 选择截止时间
     private String mYear, mMonth = "", mDay = "";// 保存年月日
     private List<TihuoInfo> tList;
     private String vipRoleDate = "";
+    private String startTime="";
     private long evalId;
     public static boolean emptyFlag = true;
-    private TimePickerDialog mDialogYearMonthDay;
+    private TimePickerDialog mDialogYearMonthDay,mStartYearMonthDay;
 
     @Override
     protected void onResume() {
@@ -85,11 +86,17 @@ public class PickActivity extends AppCompatActivity {
         // tihuoJson = bundle.getString("tihuoJson");
         tihuoInfos = (List<TihuoInfo>) bundle.getSerializable("tihuoList");
         vipRoleDate = bundle.getString("time");
+        startTime= bundle.getString("startTime");
         evalId = bundle.getLong("evalId");
         // Log.i("tihuoJson", tihuoJson);
         findViews();
     }
-
+    public void setInitDate(){
+        SimpleDateFormat formatter = new SimpleDateFormat ("yyyy-MM-dd");
+        Date curDate = new Date(System.currentTimeMillis());//获取当前时间
+        String str = formatter.format(curDate);
+        mStartTime.setText(str);
+    }
     private void findViews() {
         // TODO 查找控件
         TextView titlename = (TextView) findViewById(R.id.menu_title_name);
@@ -104,12 +111,19 @@ public class PickActivity extends AppCompatActivity {
             }
         });
         mTextTime = (TextView) findViewById(R.id.text_time);
+        mTextTime.setOnClickListener(this);
+        mStartTime = (TextView) findViewById(R.id.text_start_time);
+        mStartTime.setOnClickListener(this);
         if (vipRoleDate != "" && vipRoleDate.length() == 8) {
             mYear = vipRoleDate.substring(0, 4);
             mMonth = vipRoleDate.substring(4, 6);
             mDay = vipRoleDate.substring(6, 8);
 
             mTextTime.setText(mYear + "-" + mMonth + "-" + mDay);
+        }
+        setInitDate();
+        if (startTime!=null&&startTime != "" && startTime.length() == 8) {
+            mStartTime.setText(startTime.substring(0, 4) + "-" + startTime.substring(4, 6) + "-" + startTime.substring(6, 8));
         }
         // tList=new ArrayList<TihuoInfo>();
         if (tihuoInfos != null && tihuoInfos.size() > 0) {
@@ -138,8 +152,15 @@ public class PickActivity extends AppCompatActivity {
                     }
                 }
                 if (!emptyFlag) {
-                    if (mTextTime.getText().equals("")) {
+                    if (mStartTime.getText().equals("")) {
+                        Toast.makeText(context, "未选择开始日期", Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                    else if (mTextTime.getText().equals("")) {
                         Toast.makeText(context, "未选择截止日期", Toast.LENGTH_SHORT)
+                                .show();
+                    }else if (mTextTime.getText().toString().compareTo(mStartTime.getText().toString())<0) {
+                        Toast.makeText(context, "截止日期不能小于开始日期", Toast.LENGTH_SHORT)
                                 .show();
                     } else {
                         Intent intent = new Intent();
@@ -152,6 +173,8 @@ public class PickActivity extends AppCompatActivity {
 //                        }
 
                         bundle.putString("time", mTextTime.getText().toString().replace("-",""));
+                        bundle.putString("startTime", mStartTime.getText().toString().replace("-",""));
+
                         bundle.putSerializable("tihuoList",
                                 (Serializable) tihuoInfos);
                         updateTihuoshang(tihuoInfos);
@@ -257,6 +280,68 @@ public class PickActivity extends AppCompatActivity {
         EvalLossInfoDao evalLossInfoDao = new EvalLossInfoDao();
         String tihuoshangName = tihuoInfos2.get(0).getGsmc();
         evalLossInfoDao.updateTihuo(evalId, tihuoshangName);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.text_time:
+                mDialogYearMonthDay = new TimePickerDialog.Builder()
+                        .setType(Type.YEAR_MONTH_DAY)
+                        .setCancelStringId("取消")
+                        .setSureStringId("确定")
+                        .setTitleStringId("选择起始时间")
+                        .setYearText("年")
+                        .setMonthText("月")
+                        .setDayText("日")
+                        .setCyclic(false)
+                        .setMinMillseconds(System.currentTimeMillis())
+                        .setCurrentMillseconds(System.currentTimeMillis())
+                        .setThemeColor(getResources().getColor(R.color.timepicker_dialog_bg))
+                        .setWheelItemTextNormalColor(getResources().getColor(R.color.timetimepicker_default_text_color))
+                        .setWheelItemTextSelectorColor(getResources().getColor(R.color.timepicker_toolbar_bg))
+                        .setWheelItemTextSize(12)
+                        .setCallBack(new OnDateSetListener() {
+                            @Override
+                            public void onDateSet(TimePickerDialog timePickerView, long millseconds) {
+                                String text = getDateToString(millseconds);
+                                mTextTime.setText(text);
+                            }
+                        })
+                        .build();
+                mDialogYearMonthDay.show(getSupportFragmentManager(), "year_month_day");
+
+                break;
+            case R.id.text_start_time:
+                mStartYearMonthDay = new TimePickerDialog.Builder()
+                        .setType(Type.YEAR_MONTH_DAY)
+                        .setCancelStringId("取消")
+                        .setSureStringId("确定")
+                        .setTitleStringId("选择起始时间")
+                        .setYearText("年")
+                        .setMonthText("月")
+                        .setDayText("日")
+                        .setCyclic(false)
+                        .setMinMillseconds(System.currentTimeMillis())
+                        .setCurrentMillseconds(System.currentTimeMillis())
+                        .setThemeColor(getResources().getColor(R.color.timepicker_dialog_bg))
+                        .setWheelItemTextNormalColor(getResources().getColor(R.color.timetimepicker_default_text_color))
+                        .setWheelItemTextSelectorColor(getResources().getColor(R.color.timepicker_toolbar_bg))
+                        .setWheelItemTextSize(12)
+                        .setCallBack(new OnDateSetListener() {
+                            @Override
+                            public void onDateSet(TimePickerDialog timePickerView, long millseconds) {
+                                String text = getDateToString(millseconds);
+                                mStartTime.setText(text);
+                            }
+                        })
+                        .build();
+                mStartYearMonthDay.show(getSupportFragmentManager(), "year_month_day");
+
+                break;
+            default:
+                break;
+        }
     }
 
     /**

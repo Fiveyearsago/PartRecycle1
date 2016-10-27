@@ -28,6 +28,7 @@ import android.view.Display;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -107,6 +108,7 @@ import com.jy.recycle.util.SharedData;
 import com.jy.recycle.util.TimestampTool;
 import com.jy.recycle.util.UnicodeConverter;
 import com.jy.recycle.util.ValidateUtil;
+import com.jy.recycle.util.ZBarUtil;
 import com.jy.recycle.util.mutiphotochoser.constant.Constant;
 import com.jy.recycle.util.mutiphotochoser.utils.DisplayUtils;
 import com.jy.recycle.zxing.UploadPicActivity;
@@ -251,6 +253,7 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
     private String turnFlag = "0";
     private final static int REQUEST_PICK_PHOTO = 6;
     private Handler mHandler;
+    private String startTime="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -405,13 +408,36 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
         detailAction = new QuestionDetailAction(this);
         int width = getWindowManager().getDefaultDisplay().getWidth();
     }
+    public void loadSpinnerProvince(String province){
+        for (int i = 0; i < provinceInfos.size(); i++) {
+            // Log.i("mProvince2", pInfo.getSfmc()+" "+mProvince2);
+            if (provinceInfos.get(i).getSfmc().contains(province)) {
+                Log.i("address", i + "");
+                mProvinceSpinner.setSelection(i, true);
+                Log.i("位置", mProvinceSpinner.getSelectedItemPosition() + "");
+                return;
+            }
+        }
 
+    }
     /**
      * 处理结果
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
+            case 0x11:
+                switch (resultCode) {
+                    case RESULT_OK:
+                        // 完成
+                        String selectAddress=data.getStringExtra("selectAddress");
+                        String selectedProvince=selectAddress.substring(0,2);
+                        loadSpinnerProvince(selectedProvince);
+                        personAdd.setText(selectAddress);
+                        break;
+
+                }
+                break;
             // 定损主信息页面的返回结果
             case REQUEST_MAIN_EVAL_INFO:
                 switch (resultCode) {
@@ -430,7 +456,16 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
                 if (resultCode == RESULT_OK) {
                     final ArrayList<String> images = data
                             .getStringArrayListExtra(Constant.EXTRA_PHOTO_PATHS);
-                    QRCodeUtil.getQRString(images, context, new QRCodeUtil.QRCodeCallBack() {
+//                    QRCodeUtil.getQRString(images, context, new QRCodeUtil.QRCodeCallBack() {
+//                        @Override
+//                        public void response(String recode) {
+//                            Message message = new Message();
+//                            message.what = 2;
+//                            message.obj = recode;
+//                            mHandler.sendMessage(message);
+//                        }
+//                    });
+                    ZBarUtil.getZBarString(images, context, new ZBarUtil.QRCodeCallBack() {
                         @Override
                         public void response(String recode) {
                             Message message = new Message();
@@ -562,6 +597,8 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
                         Bundle bundle = data.getExtras();
                         // Log.i("TIHUO_REQUEST_CODE", TIHUO_REQUEST_CODE + "");
                         vipRoleDate = bundle.getString("time");
+                        startTime=bundle.getString("startTime");
+
                         // Log.i("time", vipRoleDate);
                         tihuoInfos = (List<TihuoInfo>) bundle
                                 .getSerializable("tihuoList");
@@ -757,6 +794,17 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
         this.personTel = (EditText) findViewById(R.id.text_personTel);
         personTel.addTextChangedListener(textPersonTel);
         this.personAdd = (EditText) findViewById(R.id.text_address);
+        this.personAdd.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    Intent intent = new Intent(EvalActivity6.this, SelectAddressActivity.class);
+                    intent.putExtra("address", personAdd.getText() + "");
+                    startActivityForResult(intent, 0x11);
+                }
+                return false;
+            }
+        });
         personAdd.addTextChangedListener(textPersonAdd);
         this.personAddressButton = (Button) findViewById(R.id.addressButton);
         this.mProvinceSpinner = (Spinner) findViewById(R.id.provinceSpinner);// 省份下拉菜单
@@ -878,6 +926,12 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.text_address:
+                //跳转到选择地址界面
+                Intent intent=new Intent(this,SelectAddressActivity.class);
+                intent.putExtra("address",personAdd.getText()+"");
+                startActivityForResult(intent,0x11);
+                break;
             case R.id.eval_btn_cxing:// 定型
                 gotoVehicle();
                 break;
@@ -956,6 +1010,7 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
         bundle.putString("tihuoJson", tihuoJson);
         bundle.putSerializable("tihuoList", (Serializable) tihuoInfos);
         bundle.putString("time", vipRoleDate);
+        bundle.putString("startTime", startTime);
         bundle.putLong("evalId", evalId);
         intent.putExtras(bundle);
         startActivityForResult(intent, TIHUO_REQUEST_CODE);
@@ -1939,6 +1994,8 @@ public class EvalActivity6 extends JyBaseActivity implements DialogUtil.DialogCa
                 jsonObject1.put("vipRoleDate", vipRoleDate == "null" ? ""
                         : vipRoleDate);
             }
+            jsonObject1.put("startRoleDate", startTime.equals("null") ? ""
+                    : startTime);
             contentCommit = jsonObject1.toString();
             Log.i("contentCommit", contentCommit);
         } catch (JSONException e) {

@@ -53,25 +53,26 @@ import java.util.List;
 public class SearchActivity extends AppCompatActivity implements OnClickListener,
         OnScrollListener, SwipeRefreshLayout.OnRefreshListener {
 
-    private EditText mEditBah;// 报案号编辑框
-    private EditText mEditCph;// 车牌号编辑框
-    private EditText mEditTime1;// 开始时间编辑框
-    private EditText mEditTime2;// 截止时间辑框
-    private Button mBtnSearch, mBtnSearchAll;// 搜索按钮
-    private SharedData mShare;// 共享变量
-    private Spinner mSpinnerState;// 回收单状态
-    private HSDAdapter mAdapter;// 回收单列表适配器
-    private List<Huishoudan> mList;// 适配器数据源
-    private ListView mListView;// 回收单列表
-    private int mVisibleLastIndex = 0;// 最后的可视项索引
-    private int num = 1;// 页码
-    private String responseData = "";// 登陆后服务器返回的数据（登录界面传值）
+    private EditText mEditBah;
+    private EditText mEditCph;
+    private EditText mEditTime1;
+    private EditText mEditTime2;
+    private Button mBtnSearch, mBtnSearchAll;
+    private SharedData mShare;
+    private Spinner mSpinnerState;
+    private HSDAdapter mAdapter;
+    private List<Huishoudan> mList;
+    private ListView mListView;
+    private int mVisibleLastIndex = 0;
+    private int num = 1;
+    private String responseData = "";
     private String requestData = "";
     private long mExitTime = 0;
     private String bxgsgz = "";
     private String sfcp = "";
     private SwipeRefreshLayout mSwipeLayout;
     private TimePickerDialog mDialogYearMonthDay;
+    private String sfid="";
 
     @Override
     protected void onPause() {
@@ -89,17 +90,18 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
         Bundle bundle = getIntent().getExtras();
         responseData = bundle.get("responseData").toString();
         initData();
-        findViews();// 绑定组件
+        findViews();
     }
 
     private void initData() {
-        // TODO 判断登录账号地区及规则
         try {
             JSONObject jsonObject = new JSONObject(responseData);
             bxgsgz = jsonObject.getString("bxgsgz");
             sfcp = jsonObject.getString("sfcp");
+            sfid = jsonObject.getString("sfid");
             mShare.saveBxgsgz(bxgsgz);
             mShare.saveSfcp(sfcp);
+            mShare.saveSfid(sfid);
         } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -109,19 +111,17 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
 
     @Override
     protected void onResume() {
-        // TODO 进入页面刷新
         super.onResume();
         MobclickAgent.onResume(this);
         mList.clear();
-        searchAllHsd(num, "0");// 刷新数据
+        searchAllHsd(num, "0");
     }
 
     private void findViews() {
-        // TODO 查找和绑定组件
         TextView titleback = (TextView) findViewById(R.id.menu_title_back);
         TextView titlename = (TextView) findViewById(R.id.menu_title_name);
         TextView titleMaking = (TextView) findViewById(R.id.eval_btn_outLine);
-        titlename.setText("配件查询");
+        titlename.setText("查询");
         titleMaking.setText("制作");
         titleback.setOnClickListener(this);
         titleMaking.setOnClickListener(this);
@@ -146,12 +146,11 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
 
             @Override
             public void onClick(View v) {
-                // TODO 选择开始时间
                 mDialogYearMonthDay = new TimePickerDialog.Builder()
                         .setType(Type.YEAR_MONTH_DAY)
                         .setCancelStringId("取消")
                         .setSureStringId("确定")
-                        .setTitleStringId("选择起始时间")
+                        .setTitleStringId("")
                         .setYearText("年")
                         .setMonthText("月")
                         .setDayText("日")
@@ -177,12 +176,11 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
 
             @Override
             public void onClick(View v) {
-                // TODO 选择开始时间
                 mDialogYearMonthDay = new TimePickerDialog.Builder()
                         .setType(Type.YEAR_MONTH_DAY)
                         .setCancelStringId("取消")
                         .setSureStringId("确定")
-                        .setTitleStringId("选择截止时间")
+                        .setTitleStringId("")
                         .setYearText("年")
                         .setMonthText("月")
                         .setDayText("日")
@@ -206,12 +204,11 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
         });
         mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
         mSwipeLayout.setOnRefreshListener(this);
-        // 设置下拉圆圈上的颜色，蓝色、绿色、橙色、红色
 //		mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
 //				android.R.color.holo_orange_light, android.R.color.holo_red_light);
-        mSwipeLayout.setDistanceToTriggerSync(200);// 设置手指在屏幕下拉多少距离会触发下拉刷新
-//		mSwipeLayout.setProgressBackgroundColor(R.color.red); // 设定下拉圆圈的背景
-        mSwipeLayout.setSize(SwipeRefreshLayout.LARGE); // 设置圆圈的大小
+        mSwipeLayout.setDistanceToTriggerSync(200);
+//		mSwipeLayout.setProgressBackgroundColor(R.color.red);
+        mSwipeLayout.setSize(SwipeRefreshLayout.LARGE);
     }
 
     public String getDateToString(long time) {
@@ -233,7 +230,6 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
         }
         switch (requestCode) {
             case 1:
-                // 开始时间
                 if (!year.equals(""))
                     mEditTime1.setText(year + "-" + month + "-" + day);
                 else {
@@ -241,7 +237,6 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
                 }
                 break;
             case 2:
-                // 截止时间
                 if (!year.equals(""))
                     mEditTime2.setText(year + "-" + month + "-" + day);
                 else {
@@ -255,7 +250,6 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
     }
 
     private void initSpinnerData() {
-        // TODO 初始化spinner数据
         SpinnerItem item0 = new SpinnerItem("1000", "暂存");
         SpinnerItem item1 = new SpinnerItem("1003", "供货");
         SpinnerItem item2 = new SpinnerItem("", "全部");
@@ -274,23 +268,22 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
 
     @Override
     public void onClick(View v) {
-        // TODO 处理点击事件
         switch (v.getId()) {
-            case R.id.menu_title_back:// 返回
+            case R.id.menu_title_back:
                 finish();
                 break;
-            case R.id.eval_btn_outLine:// 制作新单
+            case R.id.eval_btn_outLine:
                 Intent intent = null;
 //			bxgsgz="6";
-                if (bxgsgz.equals("1")) {//太保
+                if (bxgsgz.equals("1")) {
                     intent = new Intent(SearchActivity.this, EvalActivity.class);
-                } else if (bxgsgz.equals("2")) {//英大
+                } else if (bxgsgz.equals("2")) {
                     intent = new Intent(SearchActivity.this, EvalActivity2.class);
-                } else if (bxgsgz.equals("3")) {//中华
+                } else if (bxgsgz.equals("3")) {
                     intent = new Intent(SearchActivity.this, EvalActivity3.class);
-                } else if (bxgsgz.equals("5")) {//大地
+                } else if (bxgsgz.equals("5")) {
                     intent = new Intent(SearchActivity.this, EvalActivity4.class);
-                } else if (bxgsgz.equals("6")) {//大地
+                } else if (bxgsgz.equals("6")) {
                     intent = new Intent(SearchActivity.this, EvalActivity6.class);
                 } else if (bxgsgz.equals("7")) {
                     intent = new Intent(SearchActivity.this, EvalActivity7.class);
@@ -304,7 +297,7 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
                 // action.deleteAllEvalInfo();
                 startActivity(intent);
                 break;
-            case R.id.btnSearch:// 查询回收单
+            case R.id.btnSearch:
                 String time1 = mEditTime1.getText().toString().trim()
                         .replace("-", "");
                 String time2 = mEditTime2.getText().toString().trim()
@@ -313,8 +306,7 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
                 if (!time1.equals("") && !time2.equals("")
                         && time1.compareTo(time2) > 0) {
 
-                    // TODO 删除整单
-                    DialogUtil.showPosDialog(SearchActivity.this, "起始时间不能大于截止时间！", 0, new DialogUtil.DialogCallBack() {
+                    DialogUtil.showPosDialog(SearchActivity.this, "截止日期不能小于起始日期", 0, new DialogUtil.DialogCallBack() {
                         @Override
                         public void response(int flag) {
 
@@ -343,7 +335,6 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
     }
 
     private void searchAllHsd(int num, final String flag) {
-        // TODO 下载整个回收单
         final String pageno = String.valueOf(num);
         final String pagesize = "10";
 
@@ -416,9 +407,6 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
 
 //							Log.i("responseCode:", responseCode);
                             if ("0501".equals(responseCode)) {
-                                // 处理下载数据
-                                Log.i("回收单下载数据", dataJson.toString());
-
                                 analysisJson(dataJson.toString());
                             } else {
                                 Toast.makeText(SearchActivity.this,
@@ -431,8 +419,8 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
                         e.printStackTrace();
                     }
                 } else {
-                    Toast.makeText(SearchActivity.this, "其它异常错误",
-                            Toast.LENGTH_LONG).show();
+//                    Toast.makeText(SearchActivity.this, "",
+//                            Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -440,16 +428,11 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
     }
 
     private void analysisJson(String dataJson) {
-        // TODO 解析下载数据
         // Log.i("dataJson", dataJson);
         try {
             JSONObject jsonObject = new JSONObject(dataJson)
                     .getJSONObject("data");
             JSONArray array = jsonObject.getJSONArray("list");
-            //			if(hsdSize<10){
-//				Toast.makeText(SearchActivity.this, "已加载全部数据", Toast.LENGTH_SHORT).show();
-//				return ;
-//			}
             for (int i = 0; i < array.length(); i++) {
                 JSONObject object = array.getJSONObject(i);
                 String id = object.getString("id");
@@ -477,13 +460,12 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {
         // TODO Auto-generated method stub
-        int itemsLastIndex = mAdapter.getCount() - 1; // 数据集最后一项的索引
+        int itemsLastIndex = mAdapter.getCount() - 1;
         int lastIndex = itemsLastIndex;
         // Log.i("lastIndex", lastIndex+""+" "+mVisibleLastIndex);
         if (scrollState == OnScrollListener.SCROLL_STATE_IDLE
                 && mVisibleLastIndex == lastIndex) {
-            // 如果是自动加载,可以在这里放置异步加载数据的代码
-            searchAllHsd(++num, "0");// 下载下一页回收单列表
+            searchAllHsd(++num, "0");
         }
     }
 
@@ -492,22 +474,13 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
                          int visibleItemCount, int totalItemCount) {
         // TODO Auto-generated method stub
         mVisibleLastIndex = firstVisibleItem + visibleItemCount - 1;
-        /*
-         * Log.e("========================= ","========================");
-		 * Log.e("firstVisibleItem = ",firstVisibleItem+""); Log.e(
-		 * "visibleItemCount = ",visibleItemCount+""); Log.e("totalItemCount = "
-		 * ,totalItemCount+""); Log.e("========================= "
-		 * ,"========================");
-		 */
-        // 如果所有的记录选项等于数据集的条数，则移除列表底部视图
         if (false) {
-            Toast.makeText(this, "数据全部加载完!", Toast.LENGTH_LONG).show();
+//            Toast.makeText(this, "!", Toast.LENGTH_LONG).show();
         }
 
     }
 
     /**
-     * 单击时，返回错误信息
      *
      * @param keyCode
      * @param event
@@ -516,10 +489,8 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (KeyEvent.KEYCODE_BACK == keyCode) {
-            // this.exitLioneyeWithNoDataReturn(
-            // EvalResponse.RESPONSE_CODE_EXIT_WITH_BACK, "退出定损");
             if ((System.currentTimeMillis() - mExitTime) > 2000) {
-                Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "再一次退出程序", Toast.LENGTH_SHORT).show();
                 mExitTime = System.currentTimeMillis();
 
             } else {
@@ -533,10 +504,8 @@ public class SearchActivity extends AppCompatActivity implements OnClickListener
         return super.onKeyDown(keyCode, event);
     }
 
-    //下拉刷新
     @Override
     public void onRefresh() {
-        // 停止刷新
         mSwipeLayout.setRefreshing(false);
         searchAllHsd(0, "1");
     }

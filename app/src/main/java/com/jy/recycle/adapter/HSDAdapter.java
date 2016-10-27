@@ -208,8 +208,8 @@ public class HSDAdapter extends BaseAdapter {
 								mIntent.putExtra("hsdInfo", mHsdString);
 								Log.i("mHsdString", mHsdString);
 								//删除数据库全部回收单数据
-								EvalLossInfoAction action=new EvalLossInfoAction(context);
-								action.deleteAllEvalInfo();
+//								EvalLossInfoAction action=new EvalLossInfoAction(context);
+//								action.deleteAllEvalInfo();
 								context.startActivity(mIntent);
 							} else {
 								Toast.makeText(context, responseMessage,

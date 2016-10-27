@@ -81,6 +81,9 @@ public class EvalLossInfoAction extends BaseAction {
 	public void deleteAllEvalInfo(){
 		evalLossInfoDao.deleteAllEvalInfo();
 	}
+	public void deleteAllCompletedEvalInfo(){
+		evalLossInfoDao.deleteAllCompletedEvalInfo();
+	}
 	/**
 	 * 删除定所有回收单单信息
 	 * 
