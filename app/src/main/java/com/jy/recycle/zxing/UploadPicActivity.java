@@ -347,7 +347,7 @@ public class UploadPicActivity extends AppCompatActivity {
 				+ evalId;
 		File fileDir = new File(path);
 		File[] imageList = fileDir.listFiles();
-//		private List<File> imageLis = fileDir.listFiles();
+		//		private List<File> imageLis = fileDir.listFiles();
 
 		/**
 		 * 上传前处
@@ -396,10 +396,10 @@ public class UploadPicActivity extends AppCompatActivity {
 					uploadSuccess = uploadFile(length, new OnProgressListener(
 							length));
 				}
-//				if (isCancelled()) {
-//					sendMsg(11);
-//					return null;
-//				}
+				//				if (isCancelled()) {
+				//					sendMsg(11);
+				//					return null;
+				//				}
 				// 5.上传结束
 				if (uploadSuccess) {
 					boolean uploadFinished = uploadFinish();
@@ -429,27 +429,27 @@ public class UploadPicActivity extends AppCompatActivity {
 			progressDialog.dismiss();
 			if(uploadSuccess){
 				Toast.makeText(context, "上传成功", Toast.LENGTH_LONG).show();
-//				PATH = Environment.getExternalStorageDirectory().getAbsolutePath()
-//						+ context.getString(R.string.dir)
-//						+ context.getString(R.string.img_dir)
-//						+"/"+evalId;
+				//				PATH = Environment.getExternalStorageDirectory().getAbsolutePath()
+				//						+ context.getString(R.string.dir)
+				//						+ context.getString(R.string.img_dir)
+				//						+"/"+evalId;
 				PATH = Environment.getExternalStorageDirectory().getAbsolutePath()
 						+ context.getString(R.string.dir)
 						+ context.getString(R.string.img_dir);
 				FileOperate.delAllFile(PATH);
-//				deleteEvalInfo(evalId);
-//				QuestionDetailsDao detailsDao = QuestionDetailsDao
-//						.getInstance();
-//
-//				detailsDao.deleteId(evalId);
+				//				deleteEvalInfo(evalId);
+				//				QuestionDetailsDao detailsDao = QuestionDetailsDao
+				//						.getInstance();
+				//
+				//				detailsDao.deleteId(evalId);
 				EvalLossInfoAction action=new EvalLossInfoAction(context);
 				action.deleteAllEvalInfo();
-//				finish();
-//				Intent intent = new Intent(getApplicationContext(),SearchActivity.class);
-//				startActivity(intent);
+				//				finish();
+				//				Intent intent = new Intent(getApplicationContext(),SearchActivity.class);
+				//				startActivity(intent);
 				EvalApplication.getInstance().exit();
 			}else{
-//				sendMsg(99);
+				//				sendMsg(99);
 				Toast.makeText(context, "上传失败，请重试", Toast.LENGTH_LONG).show();
 				finish();
 			}
@@ -483,18 +483,18 @@ public class UploadPicActivity extends AppCompatActivity {
 			InputStream is = null;
 			try {
 				String url=Constants.URL_UPLOAD+"pjhsAppUploadZipDataInteractionServlet";
-//				if(mState.equals("")){
-//					 url=Constants.URL_UPLOAD+"pjhsAppUploadZipDataInteractionServlet";
-//				}else{
-//					url=Constants.URL_UPLOAD+"pjhsAppUploadZipDataSecondInteractionServlet";
-//				}
+				//				if(mState.equals("")){
+				//					 url=Constants.URL_UPLOAD+"pjhsAppUploadZipDataInteractionServlet";
+				//				}else{
+				//					url=Constants.URL_UPLOAD+"pjhsAppUploadZipDataSecondInteractionServlet";
+				//				}
 				//String url=Constants.URL_UPLOAD+"pjhsAppUploadZipDataInteractionServlet";
 				String path = url + "/QtTaskUpload?type=0"
 						+ "&taskNo=" + taskNo + "&rePackFlag=" + rePackFlag;
 
 
 				httpPost = new HttpPost(url);
-//				httpPost = new HttpPost(path);
+				//				httpPost = new HttpPost(path);
 				HttpContext localContext = new BasicHttpContext();
 				HttpResponse response = HttpUtil.getHttpClient().execute(
 						httpPost, localContext);
@@ -632,13 +632,13 @@ public class UploadPicActivity extends AppCompatActivity {
 			totalSize = (int) zipFile.length();
 
 
-//			//图片上传得到zip地址
+			//			//图片上传得到zip地址
 			String actionUrl=Constants.URL_UPLOAD+"pjhsAppUploadZipDataInteractionServlet";
-//			if(mState.equals("")){
+			//			if(mState.equals("")){
 
-//			}else{
-//				actionUrl=Constants.URL_UPLOAD+"pjhsAppUploadZipDataSecondInteractionServlet";
-//			}
+			//			}else{
+			//				actionUrl=Constants.URL_UPLOAD+"pjhsAppUploadZipDataSecondInteractionServlet";
+			//			}
 			//String actionUrl=Constants.URL_UPLOAD+"pjhsAppUploadZipDataInteractionServlet";
 			if (!background) {
 				publishProgress(1, totalSize);
@@ -684,8 +684,8 @@ public class UploadPicActivity extends AppCompatActivity {
 
 					String responseFlag = json.getString("flag");
 					String responseData = json.getString("data");
-//					String role = dataJson.getString("Js");
-//						share.saveJs(role);
+					//					String role = dataJson.getString("Js");
+					//						share.saveJs(role);
 					if(Constants.REQUEST_SUBMIT.equals(responseFlag)){
 						JSONObject jsonObject = new JSONObject(responseData);
 						String responseCode = jsonObject.getString("code");
